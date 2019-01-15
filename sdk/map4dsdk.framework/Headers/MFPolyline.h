@@ -13,15 +13,17 @@
 @class MFPath;
 
 @interface MFPolyline : MFOverlay
-  @property(nonatomic, strong, readonly, nullable) MFPath *path;
+  @property(nonatomic, strong, nullable) MFPath *path;
   @property(nonatomic, assign) bool visible;
   @property(nonatomic, assign) CGFloat width;
   @property(nonatomic, assign) CGFloat opacity;
   @property(nonatomic, strong) UIColor* _Nullable color;
   @property(nonatomic, assign, readonly) bool closedPolyline;
-- (instancetype _Nonnull ) init: (MFPath* _Nullable) path;
-- (instancetype _Nonnull ) init: (MFPath* _Nullable) path closedPolyline: (bool) closedPolyline;
-- (instancetype _Nonnull ) init: (MFPath* _Nullable) path color: (UIColor* _Nullable) color width: (CGFloat) width opacity: (CGFloat) opacity closedPolyline: (bool) closedPolyline;
+
+  - (instancetype _Nonnull ) init NS_UNAVAILABLE;
+  - (instancetype _Nonnull ) init: (MFPath* _Nullable) path;
+  - (instancetype _Nonnull ) init: (MFPath* _Nullable) path closedPolyline: (bool) closedPolyline;
+  - (instancetype _Nonnull ) init: (MFPath* _Nullable) path color: (UIColor* _Nullable) color width: (CGFloat) width opacity: (CGFloat) opacity closedPolyline: (bool) closedPolyline;
 
 @end
 

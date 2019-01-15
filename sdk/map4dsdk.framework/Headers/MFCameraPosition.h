@@ -10,20 +10,20 @@
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@class MFMapView;
+
 @interface MFCameraPosition: NSObject
 
-  - (instancetype) init: (MFMapView*) mapView;
-  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (float) zoom;
-  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (float) zoom duration: (long) duration;
-  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (float) zoom tilt :(float) tilt ;
-  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (float) zoom bearing: (float) bearing;
-  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (float) zoom tilt :(float) tilt bearing: (float) bearing;
-  @property(nonatomic, assign, getter = target) CLLocationCoordinate2D target;
-  @property(nonatomic, assign, getter = zoom) float zoom;
-  @property(nonatomic, assign, getter = bearing) float bearing;
-  @property(nonatomic, assign, getter = tilt) float tilt;
-  @property(nonatomic, assign, getter = duration) long duration;
+  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
+  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom duration: (long) duration;
+  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt ;
+  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (float) bearing;
+  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (float) bearing;
+
+  @property(nonatomic) CLLocationCoordinate2D target;
+  @property(nonatomic) double zoom;
+  @property(nonatomic) float bearing;
+  @property(nonatomic) double tilt;
+  @property(nonatomic) long duration;
 
 @end
 

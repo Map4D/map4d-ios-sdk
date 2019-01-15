@@ -15,12 +15,14 @@
 @class MFObject;
 @class MFPolyline;
 @class MFPolygon;
+@class MFCircle;
 
 @protocol MFMapViewDelegate<NSObject>
 @optional
-- (void)mapview: (MFMapView*)  mapView didTapMarker: (MFMarker*) marker;
+- (BOOL)mapview: (MFMapView*)  mapView didTapMarker: (MFMarker*) marker;
 - (void)mapview: (MFMapView*)  mapView didTapPolyline: (MFPolyline*) polyline;
 - (void)mapview: (MFMapView*)  mapView didTapPolygon: (MFPolygon*) polygon;
+- (void)mapview: (MFMapView*)  mapView didTapCircle: (MFCircle*) circle;
 - (void)mapView: (MFMapView*)  mapView willMove: (BOOL) gesture;
 - (void)mapView: (MFMapView*)  mapView movingCameraPosition: (MFCameraPosition*) position;
 - (void)mapView: (MFMapView*)  mapView didChangeCameraPosition:(MFCameraPosition*) position;
@@ -29,6 +31,9 @@
 - (void)mapView: (MFMapView*)  mapView onModeChange: (bool) is3dMode;
 - (void)mapView: (MFMapView*)  mapView didTapObject: (MFObject*) object;
 - (void)mapView: (MFMapView*)  mapView didTapMyLocation: (CLLocationCoordinate2D) location;
+
+- (BOOL)didTapMyLocationButtonForMapView: (MFMapView*) mapView;
+- (UIView *) mapView: (MFMapView *) mapView markerInfoWindow: (MFMarker *) marker;
 
 @end
 

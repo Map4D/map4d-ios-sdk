@@ -14,8 +14,10 @@
 
 @interface MFMutablePath: MFPath
 
+@property (readonly, getter=getCount) NSUInteger count;
  - (void)addCoordinate:(CLLocationCoordinate2D)coord;
  - (void)addLatitude:(CLLocationDegrees)latitude longitude:(CLLocationDegrees)longitude;
+ - (CLLocationCoordinate2D)objectAtIndex:(NSUInteger)idx;
  - (void)insertCoordinate:(CLLocationCoordinate2D)coord atIndex:(NSUInteger)index;
  - (void)replaceCoordinateAtIndex:(NSUInteger)index withCoordinate:(CLLocationCoordinate2D)coord;
  - (void)removeCoordinateAtIndex:(NSUInteger)index;

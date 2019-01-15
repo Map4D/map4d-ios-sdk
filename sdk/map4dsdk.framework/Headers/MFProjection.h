@@ -13,9 +13,9 @@
 @class MFMapView;
 
 @interface MFProjection : NSObject
+- (instancetype _Nonnull ) init NS_UNAVAILABLE;
 
-  
-  - (instancetype) init: (MFMapView*) mapView;
+- (instancetype _Nonnull ) init: (MFMapView* _Nonnull ) mapView;
 
   /** Maps an Earth coordinate to a point coordinate in the map's view. */
   - (CGPoint) pointForCoordinate:(CLLocationCoordinate2D) coordinate;

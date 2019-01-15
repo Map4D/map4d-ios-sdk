@@ -14,12 +14,18 @@
 @class MFProjection;
 @class MFCameraPosition;
 
+
+typedef NS_ENUM(NSUInteger, MFSwitchMode) {
+  MFSwitchModeDefault,
+  MFSwitchModeAuto2DTo3D,
+  MFSwitchModeAuto3DTo2D,
+  MFSwitchModeAuto,
+  MFSwitchModeManual
+};
+
 @interface MFMapView : UIView 
 
-
   @property (nonatomic, strong, setter=setMapUrl:) NSString* _Nullable mapUrl;
-  @property (nonatomic, strong, setter=setMinZoom:) NSNumber* _Nullable minZoom;
-  @property (nonatomic, strong, setter=setMaxZoom:) NSNumber* _Nullable maxZoom;
 
   // Delegate
   @property(nonatomic, weak, nullable) IBOutlet id<MFMapViewDelegate> delegate;
@@ -27,8 +33,11 @@
   //Projection
   @property(nonatomic, readonly) MFProjection * _Nullable projection;
 
+  //SwitchMode
+  @property(nonatomic) MFSwitchMode switchMode;
+
   // Camera
-  @property(nonatomic, copy, setter=setCamera:) MFCameraPosition * _Nullable camera;
+  @property(nonatomic, copy) MFCameraPosition * _Nullable camera;
 
   - (instancetype _Nonnull )initWithFrame: (CGRect)frame;
   // Enable My Location
@@ -39,12 +48,22 @@
 
   - (void) enable3dMode: (bool) enabled;
 
+  // Get Mode
   - (bool) is3dMode;
+
+- (void) setMinZoom: (double) minZoom maxZoom: (double) maxZoom;
 
   /*
   * Clears all markup that has been added to the map, including markers, polylines and ground
   * overlays.  This will not clear the visible location dot or reset the current mapType.
   */
   - (void) clear;
+
+  /*
+   * Set time display for map
+   * Default curent time
+   * return  current time if date is NULL
+   */
+  - (void) setTime: (nullable NSDate*) date;
 
 @end
