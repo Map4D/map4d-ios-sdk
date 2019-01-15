@@ -1,0 +1,16 @@
+PODS:
+  - map4dsdk (1.0.0)
+
+DEPENDENCIES:
+  - map4dsdk
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - map4dsdk
+
+SPEC CHECKSUMS:
+  map4dsdk: 5d3f53d54c3bba1591b75030ce7fbaa7c86950fe
+
+PODFILE CHECKSUM: a869972150d5bddccbe340a6bd859809f047864b
+
+COCOAPODS: 1.5.3
