@@ -17,10 +17,11 @@ Lớp MFPolyline cho phép người dùng vẽ một Polyline lên map.
     ```
 
 ## 2. Tạo Circle 
-
-  [![MAP4DSDK](https://raw.githubusercontent.com/iotlinkadmin/map4d-ios-sdk/master/docs/resource/6-circle.png)]
-
+  
+  -  ![MAP4DSDK](https://raw.githubusercontent.com/iotlinkadmin/map4d-ios-sdk/master/docs/resource/6-circle.png)
+   
   - 
+   
     ```switf
       let circle = MFCircle(CLLocationCoordinate2D(latitude: 16.074846, longitude: 108.221426), radius: 200, fill: .red, fillOpacity: 1.0)
       circle.map = mapView
