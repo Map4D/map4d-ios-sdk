@@ -1,6 +1,6 @@
 //
 //  Map4D
-//  Version: 1.1.0
+//  Version: 1.1.1
 //  Created by Sua Le on 7/31/18.
 //  Copyright@2018 by IOT Link
 //
