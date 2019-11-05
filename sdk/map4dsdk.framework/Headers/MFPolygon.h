@@ -22,11 +22,14 @@
   @property(nonatomic, strong) UIColor* _Nullable fillColor;
 
   - (instancetype _Nonnull ) init NS_UNAVAILABLE;
+
   - (instancetype _Nonnull ) init: (MFPath* _Nullable) path;
 
   - (instancetype _Nonnull ) init: (MFPath* _Nullable) path holes: (NSArray<MFPath *>* _Nonnull) holes;
 
   - (instancetype _Nonnull ) init: (MFPath* _Nullable) path fillColor: (UIColor* _Nonnull) color;
+
+  - (instancetype _Nonnull ) init: (MFPath* _Nullable) path fillColor: (UIColor* _Nonnull) color zIndex: (float) zIndex;
 @end
 
 #endif /* MFPolygon_h */

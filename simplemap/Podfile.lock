@@ -5,7 +5,7 @@ DEPENDENCIES:
   - map4dsdk
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - map4dsdk
 
 SPEC CHECKSUMS:
@@ -13,4 +13,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: a869972150d5bddccbe340a6bd859809f047864b
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.4

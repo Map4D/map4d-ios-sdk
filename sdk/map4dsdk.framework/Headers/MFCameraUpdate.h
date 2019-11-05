@@ -18,26 +18,13 @@
 @interface MFCameraUpdate : NSObject
   // Setter
   + (MFCameraUpdate *) fitBounds: (MFCoordinateBounds *) _bounds;
-  + (MFCameraUpdate *) fitBounds:(MFCoordinateBounds *) _bounds
-                withEdgeInsets:(UIEdgeInsets) _edgeInsets;
-  + (MFCameraUpdate *) fitBounds: (MFCoordinateBounds *) _bounds withEdgeInsets:(UIEdgeInsets) _edgeInsets duration: (long) _duration;
+  + (MFCameraUpdate *) fitBounds:(MFCoordinateBounds *) _bounds withEdgeInsets:(UIEdgeInsets) _edgeInsets;
   + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target;
-  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (float) zoom;
-  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (float) zoom tilt :(float) tilt ;
-  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (float) zoom bearing: (float) bearing;
-  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (float) zoom tilt :(float) tilt bearing: (float) bearing;
-  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (float) zoom duration: (long) duration;
+  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
+  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt;
+  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
+  + (MFCameraUpdate *)setTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
   + (MFCameraUpdate *)setCamera:(MFCameraPosition *) camera;
-  + (MFCameraUpdate *)setCamera:(MFCameraPosition *) camera duration: (long) duration;
-  // Getter
-  - (MFCoordinateBounds *) getBounds;
-  - (UIEdgeInsets) getEdgeInsets;
-  - (CLLocation*) getTarget;
-  - (float) getZoom;
-  - (long) getDuration;
-  - (float) getTilt;
-  - (float) getBearing;
-  
 @end
 
 #endif /* MFCameraUpdate_h */

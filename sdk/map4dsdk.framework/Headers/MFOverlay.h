@@ -16,6 +16,7 @@
 @interface MFOverlay: NSObject
   @property(nonatomic, weak) MFMapView * _Nullable map;
   @property(nonatomic, readonly, getter=getId) long Id;
+  @property(nonatomic, setter=setZIndex:) float zIndex;
   - (long) getId;
 @end
 

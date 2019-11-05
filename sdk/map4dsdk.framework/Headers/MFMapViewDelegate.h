@@ -13,6 +13,7 @@
 @class MFMarker;
 @class MFCameraPosition;
 @class MFObject;
+@class MFPlace;
 @class MFPolyline;
 @class MFPolygon;
 @class MFCircle;
@@ -28,8 +29,9 @@
 - (void)mapView: (MFMapView*)  mapView didChangeCameraPosition:(MFCameraPosition*) position;
 - (void)mapView: (MFMapView*)  mapView idleAtCameraPosition: (MFCameraPosition *) position;
 - (void)mapView: (MFMapView*)  mapView didTapAtCoordinate: (CLLocationCoordinate2D) coordinate;
-- (void)mapView: (MFMapView*)  mapView onModeChange: (bool) is3dMode;
+- (void)mapView: (MFMapView*)  mapView onModeChange: (bool) is3DMode;
 - (void)mapView: (MFMapView*)  mapView didTapObject: (MFObject*) object;
+- (void)mapView: (MFMapView*)  mapView didTapPlace: (MFPlace*) place;
 - (void)mapView: (MFMapView*)  mapView didTapMyLocation: (CLLocationCoordinate2D) location;
 
 - (BOOL)didTapMyLocationButtonForMapView: (MFMapView*) mapView;

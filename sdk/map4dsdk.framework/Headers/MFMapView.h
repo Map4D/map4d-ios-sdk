@@ -13,6 +13,7 @@
 @protocol LocationManagerDelegate;
 @class MFProjection;
 @class MFCameraPosition;
+@class MFCoordinateBounds;
 
 
 typedef NS_ENUM(NSUInteger, MFSwitchMode) {
@@ -23,10 +24,7 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   MFSwitchModeManual
 };
 
-@interface MFMapView : UIView 
-
-  @property (nonatomic, strong, setter=setMapUrl:) NSString* _Nullable mapUrl;
-
+@interface MFMapView : UIView
   // Delegate
   @property(nonatomic, weak, nullable) IBOutlet id<MFMapViewDelegate> delegate;
 
@@ -40,18 +38,37 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   @property(nonatomic, copy) MFCameraPosition * _Nullable camera;
 
   - (instancetype _Nonnull )initWithFrame: (CGRect)frame;
+
   // Enable My Location
   - (void) setMyLocationEnabled: (bool) _isMyLocationEnable;
+
+  // Set selected place
+  - (void) setSelectedPlace: (NSString* _Nullable) placeId;
+
+  // Get selected place
+  - (NSString* _Nullable) getSelectedPlace;
+
+  // Set filter places place
+  - (void) setFilterPlaces: (NSArray<NSString*>* _Nullable) filterPlaces;
+  
+  // Get filter places place
+- (NSArray<NSString*>* _Nonnull) getFilterPlaces;
+  
+  // Set place enabled
+  - (void) setPlacesEnabled: (bool) enabled;
+  
+  // Is places enabled
+  - (bool) isPlacesEnabled;
 
   // Native Zoom
   - (void) setMaxNativeZoom: (double) zoom;
 
-  - (void) enable3dMode: (bool) enabled;
+  - (void) enable3DMode: (bool) enabled;
 
   // Get Mode
-  - (bool) is3dMode;
+  - (bool) is3DMode;
 
-- (void) setMinZoom: (double) minZoom maxZoom: (double) maxZoom;
+  - (void) setMinZoom: (double) minZoom maxZoom: (double) maxZoom;
 
   /*
   * Clears all markup that has been added to the map, including markers, polylines and ground
@@ -65,5 +82,20 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
    * return  current time if date is NULL
    */
   - (void) setTime: (nullable NSDate*) date;
+
+/**
+ Enable Water Effect on 3D Mode
+ */
+  - (void) enableWaterEffect: (bool) enabled;
+
+/**
+ Build a MFCameraPosition that presents bounds with padding.
+ */
+- (nullable MFCameraPosition*) cameraForBounds: (nonnull MFCoordinateBounds*) bounds insets: (UIEdgeInsets) insets;
+
+/**
+ Build a MFCameraPosition that presents bounds.
+ */
+- (nullable MFCameraPosition*) cameraForBounds: (nonnull MFCoordinateBounds*) bounds;
 
 @end

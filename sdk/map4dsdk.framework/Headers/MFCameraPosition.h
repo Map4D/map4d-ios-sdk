@@ -14,16 +14,14 @@
 @interface MFCameraPosition: NSObject
 
   - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
-  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom duration: (long) duration;
   - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt ;
-  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (float) bearing;
-  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (float) bearing;
+  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
+  - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
 
   @property(nonatomic) CLLocationCoordinate2D target;
   @property(nonatomic) double zoom;
-  @property(nonatomic) float bearing;
+  @property(nonatomic) double bearing;
   @property(nonatomic) double tilt;
-  @property(nonatomic) long duration;
 
 @end
 

@@ -34,14 +34,6 @@
    */
   @property(nonatomic, assign) CGPoint infoWindowAnchor;
   
-  /**
-   * Higher |zIndex| value overlays will be drawn on top of lower |zIndex| value tile layers and
-   * overlays.  Equal values result in undefined draw ordering.  Markers are an exception that
-   * regardless of |zIndex|, they will always be drawn above tile layers and other non-marker
-   * overlays; they are effectively considered to be in a separate z-index group compared to other
-   * overlays.
-   */
-  @property(nonatomic, assign) float zIndex;
 @end
 
 #endif /* MFMarker_h */

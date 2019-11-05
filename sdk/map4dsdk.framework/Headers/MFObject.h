@@ -20,7 +20,7 @@
   @property(nonatomic) double  bearing;
   @property(nonatomic) CLLocationCoordinate2D coordinate;
   @property(nonatomic) double elevation;
-  @property(nonatomic) double heightScale;
+  @property(nonatomic) double height;
   @property(nonatomic, strong) MFCameraPosition* _Nullable camera;
   @property(nonatomic, strong) MFModel* _Nullable model;
   @property(nonatomic, strong, nullable) NSMutableArray* types;

@@ -200,16 +200,11 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks.sh",
-				"${PODS_ROOT}/map4dsdk/sdk/map4dsdk.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/map4dsdk.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

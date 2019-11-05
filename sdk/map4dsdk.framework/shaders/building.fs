@@ -5,15 +5,14 @@ precision mediump float;
 uniform sampler2D u_texture;
 uniform vec3 u_light_position;
 uniform vec3 u_light_color;
-uniform float u_distance;
 uniform float u_fogStart;
 uniform float u_fogRange;
+uniform vec3 u_fogColor;
 
-varying vec3 v_toEye;
+varying vec3 v_position;
 varying vec2 v_uv;
 varying vec3 v_normal;
 
-const vec4 fogColor = vec4(1.0);
 
 void main() {
     // initialize
@@ -28,8 +27,13 @@ void main() {
     diffuse = diffuseCoefficient * materialColor.rgb * u_light_color;
     vec4 vertexColor = vec4(mix(materialColor.rgb, diffuseCoefficient * diffuse, 0.2), materialColor.a);
 
+	float dist = distance(v_position, vec3(0.0));
     // fog
-    float visibility = (u_distance - u_fogStart) / u_fogRange;
+    float visibility = (dist - u_fogStart) / u_fogRange;
     visibility = clamp(visibility, 0.0, 1.0);
-    gl_FragColor = mix(vertexColor, fogColor, visibility);
+    gl_FragColor = vec4(mix(vertexColor.rgb, u_fogColor, visibility), vertexColor.a);
+	
+	if (gl_FragColor.a < 0.3 || visibility >= 0.5) {
+      discard;
+    }
 }
