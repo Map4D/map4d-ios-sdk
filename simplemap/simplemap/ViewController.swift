@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView?.enable3dMode(false)
+        mapView?.enable3DMode(false)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
