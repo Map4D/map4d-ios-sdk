@@ -24,7 +24,6 @@
   @property(nonatomic, strong) MFCameraPosition* _Nullable camera;
   @property(nonatomic, strong) MFModel* _Nullable model;
   @property(nonatomic, strong, nullable) NSMutableArray* types;
-  @property(nonatomic) bool isVerified;
   @property(nonatomic) double minZoom;
   @property(nonatomic) double maxZoom;
   @property(nonatomic) NSDate* _Nullable startDate;
