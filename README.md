@@ -81,11 +81,11 @@ class ViewController: UIViewController {
 
 [11. Effect map](https://github.com/iotlinkadmin/map4d-ios-sdk/blob/master/docs/vi/1.2/10-effect-map.md)
 
-[12. LatLngBounds](https://github.com/iotlinkadmin/map4d-ios-sdk/blob/master/docs/vi/1.2/10-lat-lng-bounds.md)
+[12. LatLngBounds](https://github.com/iotlinkadmin/map4d-ios-sdk/blob/master/docs/vi/1.2/11-lat-lng-bounds.md)
 
-[13. Map utils](https://github.com/iotlinkadmin/map4d-ios-sdk/blob/master/docs/vi/1.2/11-map-utils.md)
+[13. Map utils](https://github.com/iotlinkadmin/map4d-ios-sdk/blob/master/docs/vi/1.2/12-map-utils.md)
 
-[14. Place](https://github.com/iotlinkadmin/map4d-ios-sdk/blob/master/docs/vi/1.2/14-place.md)
+[14. Place](https://github.com/iotlinkadmin/map4d-ios-sdk/blob/master/docs/vi/1.2/13-place.md)
 
 
 License
