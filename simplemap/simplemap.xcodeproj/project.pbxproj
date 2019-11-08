@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A8502FFF82288BC1E0B2F69C /* Pods_simplemap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB743AAFCA49ED340A3C6B1 /* Pods_simplemap.framework */; };
 		BAF1AE1321D7D43F0000ACC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1AE1221D7D43F0000ACC7 /* AppDelegate.swift */; };
 		BAF1AE1521D7D43F0000ACC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF1AE1421D7D43F0000ACC7 /* ViewController.swift */; };
 		BAF1AE1821D7D43F0000ACC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF1AE1621D7D43F0000ACC7 /* Main.storyboard */; };
 		BAF1AE1A21D7D4400000ACC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAF1AE1921D7D4400000ACC7 /* Assets.xcassets */; };
 		BAF1AE1D21D7D4400000ACC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF1AE1B21D7D4400000ACC7 /* LaunchScreen.storyboard */; };
-		BEBADE7C7BAB0533D95A0B9E /* Pods_simplemap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7375A39A80EA5EE5679A6AA2 /* Pods_simplemap.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,9 +29,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		077F4DE789DE3E1AB894AFE3 /* Pods-simplemap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simplemap.debug.xcconfig"; path = "Target Support Files/Pods-simplemap/Pods-simplemap.debug.xcconfig"; sourceTree = "<group>"; };
-		7375A39A80EA5EE5679A6AA2 /* Pods_simplemap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simplemap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		82298840C140F0E485C1D55A /* Pods-simplemap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simplemap.release.xcconfig"; path = "Target Support Files/Pods-simplemap/Pods-simplemap.release.xcconfig"; sourceTree = "<group>"; };
+		07828E00336B6F4C845B7594 /* Pods-simplemap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simplemap.release.xcconfig"; path = "Target Support Files/Pods-simplemap/Pods-simplemap.release.xcconfig"; sourceTree = "<group>"; };
+		75775864FB65A0FE6C71888B /* Pods-simplemap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-simplemap.debug.xcconfig"; path = "Target Support Files/Pods-simplemap/Pods-simplemap.debug.xcconfig"; sourceTree = "<group>"; };
+		9AB743AAFCA49ED340A3C6B1 /* Pods_simplemap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_simplemap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF1AE0F21D7D43F0000ACC7 /* simplemap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = simplemap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAF1AE1221D7D43F0000ACC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAF1AE1421D7D43F0000ACC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -46,20 +46,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BEBADE7C7BAB0533D95A0B9E /* Pods_simplemap.framework in Frameworks */,
+				A8502FFF82288BC1E0B2F69C /* Pods_simplemap.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14851BF079680D145463199F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75775864FB65A0FE6C71888B /* Pods-simplemap.debug.xcconfig */,
+				07828E00336B6F4C845B7594 /* Pods-simplemap.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BAF1AE0621D7D43F0000ACC7 = {
 			isa = PBXGroup;
 			children = (
 				BAF1AE1121D7D43F0000ACC7 /* simplemap */,
 				BAF1AE1021D7D43F0000ACC7 /* Products */,
-				DC7A05780FBCA86E6CA14209 /* Pods */,
-				F9837485E40E9B696F94CF2C /* Frameworks */,
+				14851BF079680D145463199F /* Pods */,
+				FC08794FE01163B5E60E4061 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,20 +94,10 @@
 			path = simplemap;
 			sourceTree = "<group>";
 		};
-		DC7A05780FBCA86E6CA14209 /* Pods */ = {
+		FC08794FE01163B5E60E4061 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				077F4DE789DE3E1AB894AFE3 /* Pods-simplemap.debug.xcconfig */,
-				82298840C140F0E485C1D55A /* Pods-simplemap.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		F9837485E40E9B696F94CF2C /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7375A39A80EA5EE5679A6AA2 /* Pods_simplemap.framework */,
+				9AB743AAFCA49ED340A3C6B1 /* Pods_simplemap.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -109,12 +109,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAF1AE2121D7D4400000ACC7 /* Build configuration list for PBXNativeTarget "simplemap" */;
 			buildPhases = (
-				CEE1DC5D2B578868F97185A2 /* [CP] Check Pods Manifest.lock */,
+				23AFC62FD35254548F9D201F /* [CP] Check Pods Manifest.lock */,
 				BAF1AE0B21D7D43F0000ACC7 /* Sources */,
 				BAF1AE0C21D7D43F0000ACC7 /* Frameworks */,
 				BAF1AE0D21D7D43F0000ACC7 /* Resources */,
 				BAF1AE2E21D7D4DE0000ACC7 /* Embed Frameworks */,
-				EB88D014BA55158C8D4BF90F /* [CP] Embed Pods Frameworks */,
+				15FA3AA461C4ACB400217795 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,7 +172,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		CEE1DC5D2B578868F97185A2 /* [CP] Check Pods Manifest.lock */ = {
+		15FA3AA461C4ACB400217795 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		23AFC62FD35254548F9D201F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -192,23 +209,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		EB88D014BA55158C8D4BF90F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-simplemap/Pods-simplemap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -363,7 +363,7 @@
 		};
 		BAF1AE2221D7D4400000ACC7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 077F4DE789DE3E1AB894AFE3 /* Pods-simplemap.debug.xcconfig */;
+			baseConfigurationReference = 75775864FB65A0FE6C71888B /* Pods-simplemap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,7 +388,7 @@
 		};
 		BAF1AE2321D7D4400000ACC7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 82298840C140F0E485C1D55A /* Pods-simplemap.release.xcconfig */;
+			baseConfigurationReference = 07828E00336B6F4C845B7594 /* Pods-simplemap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
