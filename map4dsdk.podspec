@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'map4dsdk'
-    s.version           = '1.2.2'
+    s.version           = '1.2.3'
     s.summary           = 'Map4D SDK'
     s.homepage          = 'http://map4d.vn'
 

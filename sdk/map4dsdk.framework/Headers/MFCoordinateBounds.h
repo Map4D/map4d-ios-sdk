@@ -19,15 +19,15 @@
 
   @property(nonatomic, readonly, getter=southWest) CLLocationCoordinate2D southWest;
 
-  - (instancetype) initWithCoordinate:(CLLocationCoordinate2D)coord coordinate1:(CLLocationCoordinate2D)coord1;
+- (instancetype _Nonnull ) initWithCoordinate:(CLLocationCoordinate2D)coord coordinate1:(CLLocationCoordinate2D)coord1;
 
-  - (instancetype) initWithPath: (MFPath *)path;
+- (instancetype _Nonnull ) initWithPath: (MFPath * _Nonnull)path;
 
-  - (id)includingCoordinate:(CLLocationCoordinate2D)coordinate;
+  - (MFCoordinateBounds* _Nonnull) includingCoordinate:(CLLocationCoordinate2D)coordinate;
 
-  - (id)includingBounds:(MFCoordinateBounds *)other;
+  - (MFCoordinateBounds* _Nonnull)includingBounds:(MFCoordinateBounds * _Nonnull) other;
 
-  - (id)includingPath:(MFPath *)path;
+  - (MFCoordinateBounds* _Nonnull) includingPath:(MFPath * _Nonnull)path;
 
   - (bool)containsLatitude:(double)latitude;
   - (bool)containsLongitude:(double)longitude;
