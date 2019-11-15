@@ -8,12 +8,12 @@ Lớp LatLngBounds đại diện cho một hình chữ nhật trong toạ độ 
     open class MFCoordinateBounds : NSObject {
       open var northEast: CLLocationCoordinate2D { get }
       open var southWest: CLLocationCoordinate2D { get }
-      public init!(coordinate coord: CLLocationCoordinate2D, coordinate1 coord1: CLLocationCoordinate2D)
-      public init!(path: MFPath!)
+      public init(coordinate coord: CLLocationCoordinate2D, coordinate1 coord1: CLLocationCoordinate2D)
+      public init(path: MFPath)
       
-      open func includingCoordinate(_ coordinate: CLLocationCoordinate2D) -> Any!
-      open func includingBounds(_ other: MFCoordinateBounds!) -> Any!
-      open func includingPath(_ path: MFPath!) -> Any!
+      open func includingCoordinate(_ coordinate: CLLocationCoordinate2D) -> MFCoordinateBounds
+      open func includingBounds(_ other: MFCoordinateBounds) -> MFCoordinateBounds
+      open func includingPath(_ path: MFPath) -> MFCoordinateBounds
       open func containsLatitude(_ latitude: Double) -> Bool
       open func containsLongitude(_ longitude: Double) -> Bool
       open func contains(_ coordinate: CLLocationCoordinate2D) -> Bool
@@ -30,7 +30,7 @@ Lớp LatLngBounds đại diện cho một hình chữ nhật trong toạ độ 
    
   ```swift
     open class func fit(_ _bounds: MFCoordinateBounds!) -> MFCameraUpdate!
-    open class func fit(_ _bounds: MFCoordinateBounds!, withEdgeInsets _edgeInsets: Any!) -> MFCameraUpdate!
+    open class func fit(_ _bounds: MFCoordinateBounds!, with _edgeInsets: UIEdgeInsets) -> MFCameraUpdate!
   ```
   - ***Sử dụng:***
   ```swift
