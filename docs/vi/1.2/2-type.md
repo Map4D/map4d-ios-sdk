@@ -16,14 +16,15 @@
 
   ```Objective-C
   @interface MFCameraPosition: NSObject
-    - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
-    - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt ;
-    - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (float) bearing;
-    - (id)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (float) bearing;
+    - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom;
+    - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt ;
+    - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom bearing: (double) bearing;
+    - (instancetype)initWithTarget:(CLLocationCoordinate2D) target zoom: (double) zoom tilt :(double) tilt bearing: (double) bearing;
     @property(nonatomic) CLLocationCoordinate2D target;
     @property(nonatomic) double zoom;
-    @property(nonatomic) float bearing;
+    @property(nonatomic) double bearing;
     @property(nonatomic) double tilt;
+  
   @end
  
   @interface MFCameraUpdate : NSObject
@@ -62,11 +63,11 @@
   @interface MFCoordinateBounds : NSObject
     @property(nonatomic, readonly, getter=northEast) CLLocationCoordinate2D northEast;
     @property(nonatomic, readonly, getter=southWest) CLLocationCoordinate2D southWest;
-    - (instancetype) initWithCoordinate:(CLLocationCoordinate2D)coord coordinate1:(CLLocationCoordinate2D)coord1;
-    - (instancetype) initWithPath: (MFPath *)path;
-    - (id)includingCoordinate:(CLLocationCoordinate2D)coordinate;
-    - (id)includingBounds:(MFCoordinateBounds *)other;
-    - (id)includingPath:(MFPath *)path;
+    - (instancetype _Nonnull ) initWithCoordinate:(CLLocationCoordinate2D)coord coordinate1:(CLLocationCoordinate2D)coord1;
+    - (instancetype _Nonnull ) initWithPath: (MFPath * _Nonnull)path;
+    - (MFCoordinateBounds* _Nonnull) includingCoordinate:(CLLocationCoordinate2D)coordinate;
+    - (MFCoordinateBounds* _Nonnull)includingBounds:(MFCoordinateBounds * _Nonnull) other;
+    - (MFCoordinateBounds* _Nonnull) includingPath:(MFPath * _Nonnull)path;
     - (bool)containsLatitude:(double)latitude;
     - (bool)containsLongitude:(double)longitude;
     - (bool)contains:(CLLocationCoordinate2D)coordinate;
@@ -162,11 +163,10 @@
     @property(nonatomic) double  bearing;
     @property(nonatomic) CLLocationCoordinate2D coordinate;
     @property(nonatomic) double elevation;
-    @property(nonatomic) double heightScale;
+    @property(nonatomic) double height;
     @property(nonatomic, strong) MFCameraPosition* _Nullable camera;
     @property(nonatomic, strong) MFModel* _Nullable model;
     @property(nonatomic, strong, nullable) NSMutableArray* types;
-    @property(nonatomic) bool isVerified;
     @property(nonatomic) double minZoom;
     @property(nonatomic) double maxZoom;
     @property(nonatomic) NSDate* _Nullable startDate;
@@ -261,12 +261,12 @@
   open class MFCameraPosition : NSObject {
     public init!(target: CLLocationCoordinate2D, zoom: Double)
     public init!(target: CLLocationCoordinate2D, zoom: Double, tilt: Double)
-    public init!(target: CLLocationCoordinate2D, zoom: Double, bearing: Float)
-    public init!(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Float)
+    public init!(target: CLLocationCoordinate2D, zoom: Double, bearing: Double)
+    public init!(target: CLLocationCoordinate2D, zoom: Double, tilt: Double, bearing: Double)
     
     open var target: CLLocationCoordinate2D
     open var zoom: Double
-    open var bearing: Float
+    open var bearing: Double
     open var tilt: Double
   }
   
@@ -305,16 +305,16 @@
   open class MFCoordinateBounds : NSObject {
     open var northEast: CLLocationCoordinate2D { get }
     open var southWest: CLLocationCoordinate2D { get }
-    public init!(coordinate coord: CLLocationCoordinate2D, coordinate1 coord1: CLLocationCoordinate2D)
-    public init!(path: MFPath!)
-    
-    open func includingCoordinate(_ coordinate: CLLocationCoordinate2D) -> Any!
-    open func includingBounds(_ other: MFCoordinateBounds!) -> Any!
-    open func includingPath(_ path: MFPath!) -> Any!
+    public init(coordinate coord: CLLocationCoordinate2D, coordinate1 coord1: CLLocationCoordinate2D)
+    public init(path: MFPath)
+    open func includingCoordinate(_ coordinate: CLLocationCoordinate2D) -> MFCoordinateBounds
+    open func includingBounds(_ other: MFCoordinateBounds) -> MFCoordinateBounds
+    open func includingPath(_ path: MFPath) -> MFCoordinateBounds
     open func containsLatitude(_ latitude: Double) -> Bool
     open func containsLongitude(_ longitude: Double) -> Bool
     open func contains(_ coordinate: CLLocationCoordinate2D) -> Bool
   }
+
   
   public enum MFSwitchMode : UInt {
     case `default`
@@ -402,11 +402,10 @@
     open var bearing: Double
     open var coordinate: CLLocationCoordinate2D
     open var elevation: Double
-    open var heightScale: Double
+    open var height: Double
     open var camera: MFCameraPosition?
     open var model: MFModel?
     open var types: NSMutableArray?
-    open var isVerified: Bool
     open var minZoom: Double
     open var maxZoom: Double
     open var startDate: Date?
