@@ -11,12 +11,12 @@
     ```
     - Thêm vào podfile
     ```ruby
-      pod 'map4dsdk'
+      pod 'Map4dMap'
     ```
   - Cách dùng:
     - Cung cấp access key
     ```swift
-      import map4dsdk
+      import Map4dMap
 
       @UIApplicationMain
       class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,7 +31,7 @@
     - Tạo 1 view chứa MAP4D
     ```swift
       import UIKit
-      import map4dsdk
+      import Map4dMap
       
       class ViewController: UIViewController {
         override func viewDidLoad() {

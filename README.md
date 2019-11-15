@@ -16,7 +16,7 @@ pod repo update
 
 2. Add to Podfile
 ```ruby
-pod 'map4dsdk'
+pod 'Map4dMap'
 ```
 
 ## Using
@@ -24,7 +24,7 @@ pod 'map4dsdk'
 1. Provide access key
 
 ```swift
-import map4dsdk
+import Map4dMap
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -47,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 ```swift
 import UIKit
-import map4dsdk
+import Map4dMap
 class ViewController: UIViewController {
   
     override func viewDidLoad() {

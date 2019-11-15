@@ -1,0 +1,18 @@
+/*
+ File.strings
+ mapes
+ 
+ Created by tantv on 9/12/18.
+ 
+ */
+
+// General String
+"general.yes" = "Đồng ý";
+"general.no"  = "Không";
+"general.ok"  = "Đồng ý";
+
+// GPS Notification
+"gps_notification.title_app_permission_denied"  = "Truy cập bị từ chối";
+"gps_notification.message_app_permission_denied"  = "Để bật lại, vui lòng đi tới Cài đặt và bật cho phép truy cập vị trí từ ứng dụng.";
+"gps_notification.title_app_service_not_enale"  = "Dịch vụ chưa được bật";
+"gps_notification.message_app_service_not_enale"  = "Vui lòng bật dịch vụ vị trí để sử dụng được tính năng này .";

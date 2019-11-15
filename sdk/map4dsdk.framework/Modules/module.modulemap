@@ -1,6 +1,0 @@
-framework module map4dsdk {
-  umbrella header "map4dsdk.h"
-
-  export *
-  module * { export * }
-}
