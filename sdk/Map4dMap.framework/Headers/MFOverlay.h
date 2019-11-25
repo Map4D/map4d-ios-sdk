@@ -13,11 +13,18 @@
 
 @class MFMapView;
 
-@interface MFOverlay: NSObject
-  @property(nonatomic, weak) MFMapView * _Nullable map;
-  @property(nonatomic, readonly, getter=getId) long Id;
-  @property(nonatomic, setter=setZIndex:) float zIndex;
-  - (long) getId;
+@interface MFOverlay: NSObject {
+  @protected long _Id;
+}
+
+@property(nonatomic, weak, nullable) MFMapView* map;
+@property(nonatomic, readonly) long Id;
+@property(nonatomic, setter=setIsHidden:) bool isHidden;
+@property(nonatomic, setter=setZIndex:) float zIndex;
+
+- (long) getId;
+-(instancetype _Nonnull) init;
+
 @end
 
 #endif /* MFOverlay_h */

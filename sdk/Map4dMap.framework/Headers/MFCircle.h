@@ -11,28 +11,27 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MFCircle : MFOverlay
-@property(nonatomic, assign) bool visible;
-@property(nonatomic, assign) CGFloat fillOpacity;
+
+@property(nonatomic) CGFloat fillOpacity;
+
 /** The fill color. Defaults to blueColor. */
-@property(nonatomic, strong) UIColor* _Nullable fillColor;
-/** Position on Earth of circle center. */
-@property(nonatomic, assign) CLLocationCoordinate2D position;
-/** Radius of the circle in meters; must be positive. */
-@property(nonatomic, assign) double radius;
-/** The width of the circle's outline in screen points.  */
-@property(nonatomic, assign) double strokeWidth;
+@property(nonatomic, strong, nonnull) UIColor* fillColor;
+
 /** The color of this circle's outline. */
-@property(nonatomic, strong) UIColor* _Nullable strokeColor;
+@property(nonatomic, strong, nonnull) UIColor* strokeColor;
 
-- (instancetype _Nonnull ) init NS_UNAVAILABLE;
+/** Position on Earth of circle center. */
+@property(nonatomic) CLLocationCoordinate2D position;
 
-- (instancetype _Nonnull ) init: (CLLocationCoordinate2D) position radius: (double) radius;
+/** Radius of the circle in meters; must be positive. */
+@property(nonatomic) double radius;
 
-- (instancetype _Nonnull ) init: (CLLocationCoordinate2D) position radius: (double) radius fillColor: (UIColor*) fillColor fillOpacity: (CGFloat) fillOpacity;
+/** The width of the circle's outline in screen points.  */
+@property(nonatomic) double strokeWidth;
 
-- (instancetype _Nonnull ) init: (CLLocationCoordinate2D) position radius: (double) radius fillColor: (UIColor*) fillColor fillOpacity: (CGFloat) fillOpacity strokeWidth: (double) strokeWidth strokeColor: (UIColor*) strokeColor;
+- (instancetype _Nonnull) init;
 
-- (instancetype _Nonnull ) init: (CLLocationCoordinate2D) position radius: (double) radius fillColor: (UIColor*) fillColor fillOpacity: (CGFloat) fillOpacity strokeWidth: (double) strokeWidth strokeColor: (UIColor*) strokeColor zIndex: (float) zIndex;
+- (instancetype _Nonnull) init: (CLLocationCoordinate2D) position radius: (double) radius fillColor: (UIColor*) fillColor fillOpacity: (CGFloat) fillOpacity __deprecated_msg("This method will be removed in future versions.  Use 'init:' instead of.");
 @end
 
 NS_ASSUME_NONNULL_END

@@ -15,19 +15,15 @@
 @class MFPath;
 
 @interface MFPolyline : MFOverlay
-  @property(nonatomic, strong, nullable) MFPath *path;
-  @property(nonatomic, assign) bool visible;
-  @property(nonatomic, assign) CGFloat width;
-  @property(nonatomic, assign) CGFloat opacity;
-  @property(nonatomic, assign) MFPolylineStyle style;
-  @property(nonatomic, strong) UIColor* _Nullable color;
-  @property(nonatomic, assign, readonly) bool closed;
+@property(nonatomic, strong, nullable) MFPath *path;
+@property(nonatomic) CGFloat width;
+@property(nonatomic) CGFloat opacity;
+@property(nonatomic) MFPolylineStyle style;
+@property(nonatomic, strong, nonnull) UIColor* color;
 
-  - (instancetype _Nonnull ) init NS_UNAVAILABLE;
-  - (instancetype _Nonnull ) init: (MFPath* _Nullable) path;
-  - (instancetype _Nonnull ) init: (MFPath* _Nullable) path closed: (bool) closed;
-  - (instancetype _Nonnull ) init: (MFPath* _Nullable) path color: (UIColor* _Nullable) color width: (CGFloat) width opacity: (CGFloat) opacity style: (MFPolylineStyle) style closed: (bool) closed;
-  - (instancetype _Nonnull ) init: (MFPath* _Nullable) path color: (UIColor* _Nullable) color width: (CGFloat) width opacity: (CGFloat) opacity style: (MFPolylineStyle) style closed: (bool) closed zIndex: (float) zIndex;
+- (instancetype _Nonnull ) init;
+
+- (instancetype _Nonnull ) init: (nullable MFPath*) path __deprecated_msg("This method will be removed in future versions.  Use 'init:' instead of.");
 
 @end
 
