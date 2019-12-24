@@ -16,6 +16,8 @@
 @property(nonatomic) CGPoint groundAnchor;
 
 @property(nonatomic) double elevation;
+
+@property(nonatomic) double rotation;
 /**
  * The info window anchor specifies the point in the icon image at which to anchor the info window,
  * which will be displayed directly above this point. This point is specified within the same space
@@ -33,7 +35,7 @@
 
 @property(nonatomic, strong, nullable, setter=setIconView:) UIView * iconView;
 
-@property(nonatomic, strong, nullable) UIImage * icon;
+@property(nonatomic, strong, nullable) UIImage* icon;
 
 - (instancetype _Nonnull ) init;
 
