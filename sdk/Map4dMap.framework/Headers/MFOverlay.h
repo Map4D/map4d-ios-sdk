@@ -21,6 +21,7 @@
 @property(nonatomic, readonly) long Id;
 @property(nonatomic, setter=setIsHidden:) bool isHidden;
 @property(nonatomic, setter=setZIndex:) float zIndex;
+@property(nonatomic, setter=setUserData:) NSObject* _Nullable userData;
 
 - (long) getId;
 -(instancetype _Nonnull) init;

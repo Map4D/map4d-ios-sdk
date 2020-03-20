@@ -42,6 +42,7 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   // Enable My Location
   - (void) setMyLocationEnabled: (bool) _isMyLocationEnable;
 
+
   // Set selected place
   - (void) setSelectedPlace: (NSString* _Nullable) placeId;
 
@@ -64,6 +65,8 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   - (void) setMaxNativeZoom: (double) zoom;
 
   - (void) enable3DMode: (bool) enabled;
+
+  - (void) setTileUrl: (NSString* _Nonnull) url;
 
   // Get Mode
   - (bool) is3DMode;

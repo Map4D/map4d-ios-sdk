@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

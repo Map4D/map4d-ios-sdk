@@ -6,6 +6,6 @@ target 'simplemap' do
   use_frameworks!
 
   # Pods for simplemap
-  pod 'map4dsdk'
+  pod 'Map4dMap', '1.4.0'
 
 end

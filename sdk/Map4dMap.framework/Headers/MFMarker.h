@@ -18,6 +18,8 @@
 @property(nonatomic) double elevation;
 
 @property(nonatomic) double rotation;
+
+@property(nonatomic) bool dragable;
 /**
  * The info window anchor specifies the point in the icon image at which to anchor the info window,
  * which will be displayed directly above this point. This point is specified within the same space
