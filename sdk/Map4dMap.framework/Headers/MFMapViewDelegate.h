@@ -21,6 +21,9 @@
 @protocol MFMapViewDelegate<NSObject>
 @optional
 - (BOOL)mapview: (MFMapView*)  mapView didTapMarker: (MFMarker*) marker;
+- (void)mapview: (MFMapView*)  mapView didBeginDraggingMarker: (MFMarker*) marker;
+- (void)mapview: (MFMapView*)  mapView didEndDraggingMarker: (MFMarker*) marker;
+- (void)mapview: (MFMapView*)  mapView didDragMarker: (MFMarker*) marker;
 - (void)mapview: (MFMapView*)  mapView didTapInfoWindowOfMarker: (MFMarker*) marker;
 - (void)mapview: (MFMapView*)  mapView didTapPolyline: (MFPolyline*) polyline;
 - (void)mapview: (MFMapView*)  mapView didTapPolygon: (MFPolygon*) polygon;
