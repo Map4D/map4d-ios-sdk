@@ -19,7 +19,7 @@
 
 @property(nonatomic) double rotation;
 
-@property(nonatomic) bool dragable;
+@property(nonatomic) bool draggable;
 /**
  * The info window anchor specifies the point in the icon image at which to anchor the info window,
  * which will be displayed directly above this point. This point is specified within the same space
@@ -38,6 +38,9 @@
 @property(nonatomic, strong, nullable, setter=setIconView:) UIView * iconView;
 
 @property(nonatomic, strong, nullable) UIImage* icon;
+
+/** A Boolean value that determines whether user events are ignored and removed from the event queue. */
+@property(nonatomic, getter=isUserInteractionEnabled) bool userInteractionEnabled;
 
 - (instancetype _Nonnull ) init;
 

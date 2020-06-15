@@ -12,12 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MFCircle : MFOverlay
 
-@property(nonatomic) CGFloat fillOpacity;
+@property(nonatomic) CGFloat fillOpacity DEPRECATED_MSG_ATTRIBUTE("This property will be removed in future versions. Use 'fillColor' instead of.");
 
-/** The fill color. Defaults to blueColor. */
+/** The fill color. Defaults to redColor. */
 @property(nonatomic, strong, nonnull) UIColor* fillColor;
 
-/** The color of this circle's outline. */
+/** The color of this circle's outline. Defaults to blackColor */
 @property(nonatomic, strong, nonnull) UIColor* strokeColor;
 
 /** Position on Earth of circle center. */
@@ -28,6 +28,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 /** The width of the circle's outline in screen points.  */
 @property(nonatomic) double strokeWidth;
+
+/** A Boolean value that determines whether user events are ignored and removed from the event queue. */
+@property(nonatomic, getter=isUserInteractionEnabled) bool userInteractionEnabled;
 
 - (instancetype _Nonnull) init;
 
