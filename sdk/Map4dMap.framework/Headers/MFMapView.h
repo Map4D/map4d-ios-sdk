@@ -53,13 +53,10 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   - (void) setFilterPlaces: (NSArray<NSString*>* _Nullable) filterPlaces;
   
   // Get filter places place
-- (NSArray<NSString*>* _Nonnull) getFilterPlaces;
-  
-  // Set place enabled
-  - (void) setPlacesEnabled: (bool) enabled;
-  
-  // Is places enabled
-  - (bool) isPlacesEnabled;
+- (NSArray<NSString*>* _Nonnull) getFilterPlaces;    
+
+  - (void) setObjectsEnabled: (bool) enabled;
+  - (bool) isObjectsEnabled;
 
   // Native Zoom
   - (void) setMaxNativeZoom: (double) zoom;

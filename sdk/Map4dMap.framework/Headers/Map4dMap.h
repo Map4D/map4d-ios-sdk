@@ -1,6 +1,6 @@
 //
-//  Map4D
-//  Created by Sua Le on 10/16/19.
+//  Map4D 1.4.1
+//  Created by Sua Le on 07/06/20.
 //  Copyright@2018 by IOT Link
 //
 
@@ -21,3 +21,5 @@
 #import "MFPolygon.h"
 #import "MFCircle.h"
 #import "MFServices.h"
+#import "MFURLBuildingLayer.h"
+#import "MFURLTileLayer.h"
