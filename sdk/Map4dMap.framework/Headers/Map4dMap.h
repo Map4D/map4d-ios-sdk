@@ -1,6 +1,6 @@
 //
-//  Map4D 1.4.1
-//  Created by Sua Le on 07/06/20.
+//  Map4D 1.4.2
+//  Created by Sua Le on 07/10/20.
 //  Copyright@2018 by IOT Link
 //
 
@@ -9,6 +9,7 @@
 #import "MFMapView+Animation.h"
 #import "MFMarker.h"
 #import "MFPOI.h"
+#import "MFBuilding.h"
 #import "MFMapViewDelegate.h"
 #import "MFMutablePath.h"
 #import "MFPolyline.h"
