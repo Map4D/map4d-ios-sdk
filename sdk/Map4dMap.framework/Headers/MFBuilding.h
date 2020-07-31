@@ -14,6 +14,8 @@
 
 @interface MFBuilding : MFOverlay
 
+@property(nonatomic, copy, nullable, readonly) NSString* buildingId;
+
 @property(nonatomic, strong, nullable) NSString* name;
 
 @property(nonatomic) CLLocationCoordinate2D position;
@@ -31,6 +33,12 @@
 @property(nonatomic) CGFloat bearing;
 
 @property(nonatomic) double elevation;
+
+@property(nonatomic, strong, nullable) NSMutableArray* types;
+@property(nonatomic) double minZoom;
+@property(nonatomic) double maxZoom;
+@property(nonatomic) NSDate* _Nullable startDate;
+@property(nonatomic) NSDate* _Nullable endDate;
 
 /** A Boolean value that determines whether user events are ignored and removed from the event queue. */
 @property(nonatomic, getter=isUserInteractionEnabled) bool userInteractionEnabled;

@@ -11,19 +11,23 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#define ANNOTATION_ID_NONE 0
+#define TILEAREA_ID_NONE 0
+#define OVERLAY_ID_NONE 0
+
 @class MFMapView;
 
 @interface MFOverlay: NSObject {
-  @protected long _Id;
+  @protected UInt32 _Id;
 }
 
 @property(nonatomic, weak, nullable) MFMapView* map;
-@property(nonatomic, readonly) long Id;
+@property(nonatomic, readonly) UInt32 Id;
 @property(nonatomic, setter=setIsHidden:) bool isHidden;
 @property(nonatomic, setter=setZIndex:) float zIndex;
 @property(nonatomic, setter=setUserData:) NSObject* _Nullable userData;
 
-- (long) getId;
+- (UInt32) getId;
 -(instancetype _Nonnull) init;
 
 @end

@@ -1,6 +1,6 @@
 //
-//  Map4D 1.4.2
-//  Created by Sua Le on 07/10/20.
+//  Map4D 1.4.3
+//  Created by Sua Le on 07/31/20.
 //  Copyright@2018 by IOT Link
 //
 
@@ -18,7 +18,6 @@
 #import "MFCameraPosition.h"
 #import "MFCameraUpdate.h"
 #import "MFCoordinateBounds.h"
-#import "MFObject.h"
 #import "MFPolygon.h"
 #import "MFCircle.h"
 #import "MFServices.h"
