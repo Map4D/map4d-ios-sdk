@@ -38,6 +38,7 @@
 - (void)mapView: (MFMapView*)  mapView didTapPOI: (MFPOI*) poi;
 - (void)mapView: (MFMapView*)  mapView didTapMyLocation: (CLLocationCoordinate2D) location;
 
+- (BOOL)shouldChangeMapModeForMapView: (MFMapView*)  mapView;
 - (BOOL)didTapMyLocationButtonForMapView: (MFMapView*) mapView;
 - (UIView *) mapView: (MFMapView *) mapView markerInfoWindow: (MFMarker *) marker;
 

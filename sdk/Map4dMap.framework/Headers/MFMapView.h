@@ -8,13 +8,13 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import "MFUISettings.h"
 
 @protocol MFMapViewDelegate;
 @protocol LocationManagerDelegate;
 @class MFProjection;
 @class MFCameraPosition;
 @class MFCoordinateBounds;
-
 
 typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   MFSwitchModeDefault,
@@ -32,10 +32,13 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   @property(nonatomic, readonly) MFProjection * _Nullable projection;
 
   //SwitchMode
-  @property(nonatomic) MFSwitchMode switchMode;
+  @property(nonatomic) MFSwitchMode switchMode; DEPRECATED_MSG_ATTRIBUTE("'switchMode' is no longer supports; use 'shouldChangeMapMode' delegate instead");
 
   // Camera
   @property(nonatomic, copy) MFCameraPosition * _Nullable camera;
+
+  @property(nonatomic, strong, readonly, nonnull) MFUISettings *settings;
+
 
   - (instancetype _Nonnull )initWithFrame: (CGRect)frame;
 
@@ -53,10 +56,15 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   - (void) setFilterPlaces: (NSArray<NSString*>* _Nullable) filterPlaces;
   
   // Get filter places place
-- (NSArray<NSString*>* _Nonnull) getFilterPlaces;    
+  - (NSArray<NSString*>* _Nonnull) getFilterPlaces;
 
+  - (void) setPOIsEnabled: (bool) enabled;
+  - (bool) isPOIsEnabled;
   - (void) setBuildingsEnabled: (bool) enabled;
   - (bool) isBuildingsEnabled;
+  - (void) setHiddenBuilding: (NSString* _Nonnull) buildingId;
+  - (void) setUnhiddenBuilding: (NSString* _Nonnull) buildingId;
+  - (void) setSelectedBuildings:(NSArray<NSString*>* _Nullable) buildingIds;
 
   // Native Zoom
   - (void) setMaxNativeZoom: (double) zoom;

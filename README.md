@@ -21,26 +21,11 @@ pod 'Map4dMap'
 
 ## Using
 
-1. Provide access key
+1. Provide access key from Info.plist
 
-```swift
-import Map4dMap
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
-    var window: UIWindow?
-
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-      
-        MFServices.provideAccessKey("98fd21346d83bee24dc734231f7609c9")        
-        return true
-    }
-  //....
-}
-
+```xml
+<key>Map4dMapAccessKey</key>
+<string>{your_key}</string>
 ```
 
 2. Create map view

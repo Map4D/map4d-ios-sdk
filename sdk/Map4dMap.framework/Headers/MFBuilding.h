@@ -34,7 +34,10 @@
 
 @property(nonatomic) double elevation;
 
+@property(nonatomic, getter=isSelected) bool selected;
+
 @property(nonatomic, strong, nullable) NSMutableArray* types;
+@property(nonatomic, strong, nullable) NSMutableArray* places;
 @property(nonatomic) double minZoom;
 @property(nonatomic) double maxZoom;
 @property(nonatomic) NSDate* _Nullable startDate;
