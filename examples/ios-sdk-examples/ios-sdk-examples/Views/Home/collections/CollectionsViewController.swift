@@ -9,7 +9,7 @@
 import UIKit
 
 class CollectionsViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
-
+  
   @IBOutlet weak var viewExplorer: UIView!
   
   @IBOutlet weak var tableViewCollections: UITableView!
@@ -27,7 +27,7 @@ class CollectionsViewController: UIViewController , UITableViewDataSource, UITab
   let ITEM_ANIMATION_MOVE =  8
   
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
     self.navigationItem.title = "Tutorial"
     addListener()
   }
@@ -54,55 +54,55 @@ class CollectionsViewController: UIViewController , UITableViewDataSource, UITab
           self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
         }
         break
-    case ITEM_MARKER:
-      let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "markerStoryBoard") as? MarkesViewController
-      if (collectionUIViewController != nil){
-        self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
-      }
-      break
-    case ITEM_POLYLINE:
-      let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "polylineStoryBoard") as? PolylineViewController
-      if (collectionUIViewController != nil){
-        self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
-      }
-      break
-    case ITEM_POLYGON:
-      let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "polygonStoryBoard") as? PolygonViewController
-      if (collectionUIViewController != nil){
-        self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
-      }
-      break
-    case ITEM_CIRCLE:
-      let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "circleStoryBoard") as? CircleViewController
-      if (collectionUIViewController != nil){
-        self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
-      }
-      break
-    case ITEM_TILE_AREA:
-      let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "tileAreaStoryBoard") as? TileAreaViewController
-      if (collectionUIViewController != nil){
-        self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
-      }
-      break
-    case ITEM_MY_LOCATION:
-      let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "myLocationStoryBoard") as? MyLocationViewController
-      if (collectionUIViewController != nil){
-        self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
-      }
-      break
-    case ITEM_DELEGATE:
-      let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "delegateStoryBoard") as? DelegateViewController
-      if (collectionUIViewController != nil){
-        self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
-      }
-      break
-    case ITEM_ANIMATION_MOVE:
-      let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "animateStoryBoard") as? AnimateViewController
-      if (collectionUIViewController != nil){
-        self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
-      }
-      break
-    default:
+      case ITEM_MARKER:
+        let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "markerStoryBoard") as? MarkesViewController
+        if (collectionUIViewController != nil){
+          self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
+        }
+        break
+      case ITEM_POLYLINE:
+        let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "polylineStoryBoard") as? PolylineViewController
+        if (collectionUIViewController != nil){
+          self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
+        }
+        break
+      case ITEM_POLYGON:
+        let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "polygonStoryBoard") as? PolygonViewController
+        if (collectionUIViewController != nil){
+          self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
+        }
+        break
+      case ITEM_CIRCLE:
+        let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "circleStoryBoard") as? CircleViewController
+        if (collectionUIViewController != nil){
+          self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
+        }
+        break
+      case ITEM_TILE_AREA:
+        let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "tileAreaStoryBoard") as? TileAreaViewController
+        if (collectionUIViewController != nil){
+          self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
+        }
+        break
+      case ITEM_MY_LOCATION:
+        let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "myLocationStoryBoard") as? MyLocationViewController
+        if (collectionUIViewController != nil){
+          self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
+        }
+        break
+      case ITEM_DELEGATE:
+        let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "delegateStoryBoard") as? DelegateViewController
+        if (collectionUIViewController != nil){
+          self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
+        }
+        break
+      case ITEM_ANIMATION_MOVE:
+        let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "animateStoryBoard") as? AnimateViewController
+        if (collectionUIViewController != nil){
+          self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
+        }
+        break
+      default:
         let collectionUIViewController = storyBoard.instantiateViewController(withIdentifier: "settingsStoryBoard") as? SettingsViewController
         if (collectionUIViewController != nil){
           self.navigationController?.pushViewController(collectionUIViewController!, animated: true)
@@ -129,5 +129,5 @@ class CollectionsViewController: UIViewController , UITableViewDataSource, UITab
     navigationController?.popViewController(animated: true)
     
   }
-
+  
 }

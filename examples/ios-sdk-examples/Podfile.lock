@@ -1,16 +1,16 @@
 PODS:
-  - map4dsdk (1.1.0)
+  - Map4dMap (1.4.4)
 
 DEPENDENCIES:
-  - map4dsdk (= 1.1.0)
+  - Map4dMap (~> 1.4.4)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - map4dsdk
+  trunk:
+    - Map4dMap
 
 SPEC CHECKSUMS:
-  map4dsdk: 42700039d225e747f8d4cc67acb8b702fbbd6bd3
+  Map4dMap: 849c007ebfc536927b351a5f2f6dabecc9c7dea6
 
-PODFILE CHECKSUM: 6dfe0081c3b09dd227ef3fb7857bd8d3be9e0c26
+PODFILE CHECKSUM: 6306d2b482602db07ec390f2362cc24e218b8bfc
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.9.3

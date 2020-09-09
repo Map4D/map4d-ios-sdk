@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -270,6 +270,7 @@
 		FF60E11021E08F0100BAB7CA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				FF60E0D921E066F700BAB7CA /* ViewController.swift */,
 				FF4C8D2521E60C6D00A22AE9 /* animate */,
 				FF4C8D2421E60C6300A22AE9 /* delegate */,
 				FF4C8D2321E60C5D00A22AE9 /* mylocation */,
@@ -280,7 +281,6 @@
 				FF4C8D1E21E60C1800A22AE9 /* markes */,
 				FF4C8D1B21E5FD8E00A22AE9 /* settings */,
 				FF60E11921E09CCE00BAB7CA /* collections */,
-				FF60E0D921E066F700BAB7CA /* ViewController.swift */,
 				FF60E11421E0907500BAB7CA /* Map2d */,
 				FF60E11321E0906500BAB7CA /* Map3d */,
 				FF60E0DB21E066F700BAB7CA /* Main.storyboard */,
@@ -472,20 +472,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-ios-sdk-examples/Pods-ios-sdk-examples-frameworks.sh",
-				"${PODS_ROOT}/map4dsdk/sdk/map4dsdk.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ios-sdk-examples/Pods-ios-sdk-examples-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/map4dsdk.framework",
+				"${PODS_ROOT}/Target Support Files/Pods-ios-sdk-examples/Pods-ios-sdk-examples-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ios-sdk-examples/Pods-ios-sdk-examples-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ios-sdk-examples/Pods-ios-sdk-examples-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

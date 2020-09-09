@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class Map3dViewController: UIViewController {
   let hcmCoordinate = CLLocationCoordinate2DMake(10.770223, 106.704023)
@@ -20,7 +20,7 @@ class Map3dViewController: UIViewController {
     map4d.setMyLocationEnabled(true)
     // Move To Camera
     let camera = MFCameraPosition(target: hcmCoordinate, zoom: 15)
-    map4d.move(camera)
+    map4d.moveCamera(MFCameraUpdate.setCamera(camera))
     
     let markerInCamera = MFMarker.init()
     markerInCamera.position = hcmCoordinate
@@ -29,7 +29,7 @@ class Map3dViewController: UIViewController {
     markerInCamera.map = map4d
     map4d.switchMode = MFSwitchMode.manual
     // Set 3D Map
-    map4d.enable3dMode(true)
+    map4d.enable3DMode(true)
     }
 
 }

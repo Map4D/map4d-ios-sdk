@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class TileAreaViewController: UIViewController {
   @IBOutlet weak var lbTitle: UILabel!
@@ -22,7 +22,7 @@ class TileAreaViewController: UIViewController {
   var bounds : MFCoordinateBounds?
   var isInitBounds = false
   override func viewDidLoad() {
-        super.viewDidLoad()
+    super.viewDidLoad()
     self.navigationItem.title = "Tile Area"
     initBounds()
     addTileArea()

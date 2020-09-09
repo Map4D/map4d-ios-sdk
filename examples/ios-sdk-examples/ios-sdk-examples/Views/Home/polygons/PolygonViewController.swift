@@ -7,22 +7,22 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class PolygonViewController: UIViewController {
   @IBOutlet weak var lbTitle: UILabel!
   
   @IBOutlet weak var lbHide: UIButton!
   @IBOutlet weak var map4d: MFMapView!
-  var pathPolygon = MFMutablePath.init()
+  var pathPolygon = MFMutablePath()
   var hole = MFMutablePath.init()
   var isInitPolygon = false
   var polygon: MFPolygon?
   var isAddPolygon = false
   override func viewDidLoad() {
-        super.viewDidLoad()
-      self.navigationItem.title = "Polygon"
-      addPolygon()
+    super.viewDidLoad()
+    self.navigationItem.title = "Polygon"
+    addPolygon()
     map4d.delegate = self
   }
   override func viewDidLayoutSubviews() {
@@ -35,11 +35,13 @@ class PolygonViewController: UIViewController {
     if (!isAddPolygon){
       
       // Move Camera To Polygon Position Before Draw
-      let bounds = MFCoordinateBounds().includingPath(pathPolygon)
-      let cameraUpdate = MFCameraUpdate.fit((bounds as! MFCoordinateBounds))
+      let bounds = MFCoordinateBounds(path: pathPolygon)
+      let cameraUpdate = MFCameraUpdate.fit(bounds)
       map4d.moveCamera(cameraUpdate)
       
-      polygon = MFPolygon.init(pathPolygon, holes: [hole])
+      polygon = MFPolygon()
+      polygon?.path = pathPolygon
+      polygon?.holes = [hole]
       polygon?.map = map4d
       isAddPolygon = true
     }
@@ -82,8 +84,8 @@ class PolygonViewController: UIViewController {
   }
   
   @IBAction func hide(_ sender: Any) {
-    polygon?.visible = !(polygon?.visible)!
-    if ((polygon?.visible)!){
+    polygon?.isHidden = !(polygon?.isHidden)!
+    if ((polygon?.isHidden)!){
       lbHide.setTitle("Hide", for: .normal)
     } else {
       lbHide.setTitle("Show", for: .normal)
@@ -91,16 +93,16 @@ class PolygonViewController: UIViewController {
   }
   @IBAction func update(_ sender: Any) {
     if (isAddPolygon){
-        // update path
-        // remove last coordinate
-        pathPolygon.removeLastCoordinate()
-        // add new coordinatre
-        pathPolygon.add(CLLocationCoordinate2DMake(16.046232,108.194873))
-        // add first coordinate
-        pathPolygon.add(pathPolygon.object(at: 0))
-        polygon?.path = pathPolygon
-        // update color
-        polygon?.fillColor = .red
+      // update path
+      // remove last coordinate
+      pathPolygon.removeLastCoordinate()
+      // add new coordinatre
+      pathPolygon.add(CLLocationCoordinate2DMake(16.046232,108.194873))
+      // add first coordinate
+      pathPolygon.add(pathPolygon.object(at: 0))
+      polygon?.path = pathPolygon
+      // update color
+      polygon?.fillColor = .red
     }
   }
 }

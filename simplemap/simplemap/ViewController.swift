@@ -10,15 +10,15 @@ import UIKit
 import Map4dMap
 
 class ViewController: UIViewController {
-    @IBOutlet weak var mapView: MFMapView?
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        mapView?.enable3DMode(false)
-      mapView?.setTileUrl("")
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-
+  @IBOutlet weak var mapView: MFMapView?
+  
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    mapView?.enable3DMode(false)
+    mapView?.setTileUrl("")
+    // Do any additional setup after loading the view, typically from a nib.
+  }
+  
+  
 }
 

@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class DelegateViewController: UIViewController {
-
+  
   @IBOutlet weak var lb2D3D: UIButton!
   @IBOutlet weak var map4d: MFMapView!
   
@@ -28,16 +28,16 @@ class DelegateViewController: UIViewController {
     map4d.delegate = self
     
     // Move To Camera
-    let camera = MFCameraPosition.init(target: CLLocationCoordinate2DMake(16.060166,108.222713), zoom: 14)
-    map4d.move(camera)
+    let camera = MFCameraPosition(target: CLLocationCoordinate2DMake(16.060166,108.222713), zoom: 14)
+    map4d.moveCamera(MFCameraUpdate.setCamera(camera))
     
     // Enable My Location
     map4d.setMyLocationEnabled(true)
   }
   
   @IBAction func switchMode(_ sender: Any) {
-    let isSwitchMode = !map4d.is3dMode()
-    map4d.enable3dMode(isSwitchMode)
+    let isSwitchMode = !map4d.is3DMode()
+    map4d.enable3DMode(isSwitchMode)
   }
   
 }
@@ -47,8 +47,8 @@ extension DelegateViewController: MFMapViewDelegate {
   func mapView(_ mapView: MFMapView!, willMove gesture: Bool) {
     tvNotice.text = "delegate will mode"
   }
-  func mapView(_ mapView: MFMapView!, didTap object: MFObject!) {
-    tvNotice.text = "delegate tap object: " + String(object.name)
+  func mapView(_ mapView: MFMapView!, didTap building: MFBuilding!) {
+    tvNotice.text = "delegate tap object: \(building.name ?? "")"
   }
   func mapView(_ mapView: MFMapView!, didTapMyLocation location: CLLocationCoordinate2D) {
     tvNotice.text = "delegate tap on my location "
@@ -73,7 +73,7 @@ extension DelegateViewController: MFMapViewDelegate {
   func mapView(_ mapView: MFMapView!, didTapAt coordinate: CLLocationCoordinate2D) {
     tvNotice.text = "map click: " + String(coordinate.latitude) + "," + String(coordinate.longitude)
   }
-
+  
   func didTapMyLocationButton(for mapView: MFMapView!) -> Bool {
     lbContent.text = "tap button my location"
     return false

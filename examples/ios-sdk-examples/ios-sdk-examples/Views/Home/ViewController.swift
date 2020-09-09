@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class ViewController: UIViewController {
   @IBOutlet weak var img2DMap: UIImageView!
@@ -23,19 +23,19 @@ class ViewController: UIViewController {
   func addListener() {
     // 2D map
     let tap2DGestureRecognizer = UITapGestureRecognizer(target: self,
-                                                      action: #selector(image2DTapped(tapGestureRecognizer:)))
+                                                        action: #selector(image2DTapped(tapGestureRecognizer:)))
     img2DMap.isUserInteractionEnabled = true
     img2DMap.addGestureRecognizer(tap2DGestureRecognizer)
     
     // 3D map
     let tap3DGestureRecognizer = UITapGestureRecognizer(target: self,
-                                                      action: #selector(image3DTapped(tapGestureRecognizer:)))
+                                                        action: #selector(image3DTapped(tapGestureRecognizer:)))
     img3DMap.isUserInteractionEnabled = true
     img3DMap.addGestureRecognizer(tap3DGestureRecognizer)
     
     // View Collection
     let tapViewCollectionGestureRecognizer = UITapGestureRecognizer(target: self,
-                                                        action: #selector(viewCollectionTapped(tapGestureRecognizer:)))
+                                                                    action: #selector(viewCollectionTapped(tapGestureRecognizer:)))
     viewCollections.isUserInteractionEnabled = true
     viewCollections.addGestureRecognizer(tapViewCollectionGestureRecognizer)
   }

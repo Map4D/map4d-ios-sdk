@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class MyLocationViewController: UIViewController {
   @IBOutlet weak var tvMyLocation: UILabel!
@@ -17,15 +17,15 @@ class MyLocationViewController: UIViewController {
   var isEnableMyLocation = false
   
   override func viewDidLoad() {
-        super.viewDidLoad()
-      self.navigationItem.title = "My Location"
-      // Enable My Location
-      map4d.setMyLocationEnabled(true)
+    super.viewDidLoad()
+    self.navigationItem.title = "My Location"
+    // Enable My Location
+    map4d.setMyLocationEnabled(true)
     
-      // Set Delegate
-      map4d.delegate = self
-    }
-    
+    // Set Delegate
+    map4d.delegate = self
+  }
+  
   @IBAction func disableMyLocation(_ sender: Any) {
     isEnableMyLocation = !isEnableMyLocation
     if (isEnableMyLocation){

@@ -7,16 +7,16 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class PolylineViewController: UIViewController {
-
+  
   @IBOutlet weak var labelHide: UIButton!
   @IBOutlet weak var tvNotice: UILabel!
   @IBOutlet weak var map4d: MFMapView!
   var polyline: MFPolyline?
   var isAddPolyline = false
-  var pathPolyline = MFMutablePath.init()
+  var pathPolyline = MFMutablePath()
   var sizePath = 4;
   var isInitPolyline = false
   override func viewDidLoad() {
@@ -49,11 +49,12 @@ class PolylineViewController: UIViewController {
     if (!isAddPolyline){
       // Move Camera To Polyline Position Before Draw
       let bounds = MFCoordinateBounds().includingPath(pathPolyline)
-      let cameraUpdate = MFCameraUpdate.fit((bounds as! MFCoordinateBounds))
+      let cameraUpdate = MFCameraUpdate.fit(bounds)
       map4d.moveCamera(cameraUpdate)
       
       // Init Polyline
-      polyline = MFPolyline.init(pathPolyline, closedPolyline: true)
+      polyline = MFPolyline()
+      polyline?.path = pathPolyline
       polyline?.color = .blue
       polyline?.width = 4
       polyline?.map = map4d
@@ -95,8 +96,8 @@ class PolylineViewController: UIViewController {
   
   
   @IBAction func hideAndShowPolyline(_ sender: Any) {
-    polyline?.visible = !(polyline?.visible)!
-    if ((polyline?.visible)!){
+    polyline?.isHidden = !(polyline?.isHidden)!
+    if ((polyline?.isHidden)!){
       labelHide.setTitle("hide", for: .normal)
     } else {
       labelHide.setTitle("show", for: .normal)

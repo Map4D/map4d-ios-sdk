@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class SettingsViewController: UIViewController {
   @IBOutlet weak var tvX: UILabel!
@@ -16,45 +16,45 @@ class SettingsViewController: UIViewController {
   var isTimeMapSwitch = false
   @IBOutlet weak var map4d: MFMapView!
   override func viewDidLoad() {
-        super.viewDidLoad()
-      self.navigationItem.title = "Map Setting"
-      
-      // Set Mode Auto
-      // 3D Mode: zoom >= 17
-      // Zoom >= 17 auto Enable 3D, and zoom < 17 auto switch to 2D
-      map4d.switchMode = MFSwitchMode.auto
-
-       /*description mode*/
-       /* MFSwitchMode.default = MFSwitchMode.auto3DTo2D
-         If you enable 3D Mode, It can auto switch to 2D if zoom < 17
-       * MFSwitchMode.manual
-         you must be set 2D or 3D mode manual, It cannot zoom to 2D if the current mode is 3D mode.
-       * MFSwitchMode.auto2DTo3D
-         It can auto switch to 3D if zoom >= 17
-       */
+    super.viewDidLoad()
+    self.navigationItem.title = "Map Setting"
+    
+    // Set Mode Auto
+    // 3D Mode: zoom >= 17
+    // Zoom >= 17 auto Enable 3D, and zoom < 17 auto switch to 2D
+    map4d.switchMode = MFSwitchMode.auto
+    
+    /*description mode*/
+    /* MFSwitchMode.default = MFSwitchMode.auto3DTo2D
+     If you enable 3D Mode, It can auto switch to 2D if zoom < 17
+     * MFSwitchMode.manual
+     you must be set 2D or 3D mode manual, It cannot zoom to 2D if the current mode is 3D mode.
+     * MFSwitchMode.auto2DTo3D
+     It can auto switch to 3D if zoom >= 17
+     */
     
     
-      // Move camera To
-      // Han River Bridge in Da Nang
-      let camera = MFCameraPosition.init(target: CLLocationCoordinate2DMake(16.070662,108.224940), zoom:  16)
-      map4d.move(camera)
+    // Move camera To
+    // Han River Bridge in Da Nang
+    let camera = MFCameraPosition(target: CLLocationCoordinate2DMake(16.070662,108.224940), zoom:  16)
+    map4d.moveCamera(MFCameraUpdate.setCamera(camera))
     
-      // set MinZoom, maxZoom
-      map4d.setMinZoom(3, maxZoom: 20)
+    // set MinZoom, maxZoom
+    map4d.setMinZoom(3, maxZoom: 20)
     
-      // setMax Native Zoom
-      map4d.setMaxNativeZoom(18)
+    // setMax Native Zoom
+    map4d.setMaxNativeZoom(18)
     
-      // setMode = 3D, minZoom = 17
-      map4d.enable3dMode(true)
+    // setMode = 3D, minZoom = 17
+    map4d.enable3DMode(true)
     
-      // set Mode = 2D
-      // map4d.enable3dMode(false)
+    // set Mode = 2D
+    // map4d.enable3dMode(false)
     
-      // Enable delegate
-      map4d.delegate = self
+    // Enable delegate
+    map4d.delegate = self
     
-    }
+  }
   
   @IBAction func btnSetTimeMap(_ sender: Any) {
     isTimeMapSwitch = !isTimeMapSwitch
@@ -62,8 +62,8 @@ class SettingsViewController: UIViewController {
     let camera = MFCameraPosition.init(target: CLLocationCoordinate2DMake(10.771767,106.704515), zoom: 17, tilt: (map4d.camera?.tilt)!, bearing: (map4d.camera?.bearing)!)
     tvX.isHidden = true
     tvY.isHidden = true
-     tvTime.isHidden = false
-    map4d.move(camera)
+    tvTime.isHidden = false
+    map4d.moveCamera(MFCameraUpdate.setCamera(camera))
     if (isTimeMapSwitch){
       let isoDate = "1900-04-14T10:44:00+0000"
       let dateFormatter = DateFormatter()
@@ -72,18 +72,18 @@ class SettingsViewController: UIViewController {
       map4d.setTime(date)
       tvTime.text = isoDate
     } else {
-      let isoDate = "2019-04-14T10:44:00+0000"
+      let isoDate = "2020-04-14T10:44:00+0000"
       let dateFormatter = DateFormatter()
       dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
       let date = dateFormatter.date(from: isoDate)!
       map4d.setTime(date)
       tvTime.text = isoDate
       // get current mode
-      let is3DMode = map4d.is3dMode()
+      let is3DMode = map4d.is3DMode()
       // return true if 3D, false if 2D Mode
     }
   }
-
+  
 }
 
 extension SettingsViewController: MFMapViewDelegate {
@@ -105,5 +105,5 @@ extension SettingsViewController: MFMapViewDelegate {
     NSLog(" latLng = (%lf, %lf)", (invertToLatLng?.latitude)!, (invertToLatLng?.longitude)!)
     
   }
-
+  
 }

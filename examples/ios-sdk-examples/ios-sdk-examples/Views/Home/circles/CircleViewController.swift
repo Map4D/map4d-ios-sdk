@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class CircleViewController: UIViewController {
   
@@ -28,20 +28,29 @@ class CircleViewController: UIViewController {
   }
   
   override func viewDidLayoutSubviews() {
-    map4d.move(to: (circle?.position)!, zoom: 13)
+    guard let target = circle?.position else { return } 
+    let cameraPosition = MFCameraPosition(target: target, zoom: 17, tilt: 50, bearing: 0)
+    map4d.moveCamera(MFCameraUpdate.setCamera(cameraPosition))
   }
   
   func addCircle(){
     if (!isAddCircle){
-      circle = MFCircle.init(posCicle1, radius: 1000, fill: .blue, fillOpacity: 1.0)
+      circle = MFCircle()
+      circle!.position = posCicle1
+      circle?.radius = 1000.0
+      circle?.fillColor = .blue
       circle?.map = map4d
-      map4d.move(to: (circle?.position)!, zoom: 13)
+      guard let target = circle?.position else { return }
+      let cameraPosition = MFCameraPosition(target: target , zoom: 17, tilt: 50, bearing: 0)
+      map4d.moveCamera(MFCameraUpdate.setCamera(cameraPosition))
       isAddCircle = true
     }
   }
   @IBAction func add(_ sender: Any) {
     addCircle()
-    map4d.move(to: (circle?.position)!)
+    guard let target = circle?.position else { return }
+    let cameraPosition = MFCameraPosition(target: target , zoom: 17, tilt: 50, bearing: 0)
+    map4d.moveCamera(MFCameraUpdate.setCamera(cameraPosition))
   }
   @IBAction func remove(_ sender: Any) {
     if (isAddCircle){
@@ -51,8 +60,8 @@ class CircleViewController: UIViewController {
   }
   
   @IBAction func hide(_ sender: Any) {
-    circle?.visible = !(circle?.visible)!
-    if ((circle?.visible)!){
+    circle?.isHidden = !(circle?.isHidden)!
+    if ((circle?.isHidden)!){
       lbHide.setTitle("Hide", for: .normal)
     } else {
       lbHide.setTitle("Show", for: .normal)
@@ -63,23 +72,24 @@ class CircleViewController: UIViewController {
     if (isAddCircle){
       enumUpdateCircle+=1
       switch enumUpdateCircle {
-      case 1:
-        circle?.position = posCicle2
-        circle?.radius = 3000
-        break
-      case 2:
-        circle?.position = posCicle3
-        circle?.radius = 6000
-        break
-      default:
-        circle?.position = posCicle1
-        circle?.radius = 9000
-        enumUpdateCircle = 0
+        case 1:
+          circle?.position = posCicle2
+          circle?.radius = 3000
+          break
+        case 2:
+          circle?.position = posCicle3
+          circle?.radius = 6000
+          break
+        default:
+          circle?.position = posCicle1
+          circle?.radius = 9000
+          enumUpdateCircle = 0
       }
       circle?.fillColor = .red
-      circle?.fillOpacity = 0.5
       
-      map4d.move(to: (circle?.position)!, zoom: 13)
+      guard let target = circle?.position else { return }
+      let cameraPosition = MFCameraPosition(target: target , zoom: 13, tilt: 50, bearing: 0)
+      map4d.moveCamera(MFCameraUpdate.setCamera(cameraPosition))
     }
   }
 }

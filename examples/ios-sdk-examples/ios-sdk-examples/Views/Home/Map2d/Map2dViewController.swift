@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class Map2dViewController: UIViewController {
 
@@ -18,12 +18,12 @@ class Map2dViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Map 2D"
         // Set 2D Map
-        map4d.enable3dMode(false)
+        map4d.enable3DMode(false)
         // Enable My Location Button
         map4d.setMyLocationEnabled(true)
         // Move To Camera
         let camera = MFCameraPosition(target: hcmCoordinate, zoom: 15)
-        map4d.move(camera)
+        map4d.moveCamera(MFCameraUpdate.setCamera(camera))
     
         let markerInCamera = MFMarker.init()
         markerInCamera.position = hcmCoordinate

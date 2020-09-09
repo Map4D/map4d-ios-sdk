@@ -7,10 +7,10 @@
 //
 
 import UIKit
-import map4dsdk
+import Map4dMap
 
 class MarkesViewController: UIViewController {
-
+  
   @IBOutlet weak var map4d: MFMapView!
   @IBOutlet weak var tvNotice: UILabel!
   var listMarker: NSMutableArray = []
@@ -23,13 +23,13 @@ class MarkesViewController: UIViewController {
   @IBOutlet weak var btnRemoveAllMarker: UIButton!
   
   override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationItem.title = "Marker"
-        initDataMarker()
-        addAllMarker()
-        getLatLngBound()
-        map4d.delegate = self
-    }
+    super.viewDidLoad()
+    self.navigationItem.title = "Marker"
+    initDataMarker()
+    addAllMarker()
+    getLatLngBound()
+    map4d.delegate = self
+  }
   
   func initDataMarker(){
     
@@ -52,7 +52,7 @@ class MarkesViewController: UIViewController {
   
   func addAllMarker(){
     if (!isAddMarker){
-
+      
       // add icon marker
       for x in 0..<arrIconMarkerLatLngs.count {
         let lat = arrIconMarkerLatLngs[x][0];
@@ -140,7 +140,7 @@ class MarkesViewController: UIViewController {
       let cameraUpdate = MFCameraUpdate.fit(latLngBounds)
       
       map4d.moveCamera(cameraUpdate)
-  
+      
     }
   }
   
@@ -182,7 +182,7 @@ extension MarkesViewController: MFMapViewDelegate {
     for x in 0..<listMarker.count {
       // search marker iconView
       if (x >= totalIconMarker){
-       let lcMarker = listMarker.object(at: x) as! MFMarker
+        let lcMarker = listMarker.object(at: x) as! MFMarker
         if (lcMarker == marker){
           isIconViewMarker = true
           break
