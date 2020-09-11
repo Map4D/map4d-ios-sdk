@@ -64,7 +64,7 @@ class ViewController: UIViewController {
 
 [10. Effect map](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/10-effect-map.md)
 
-[111. LatLngBounds](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/11-lat-lng-bounds.md)
+[11. LatLngBounds](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/11-lat-lng-bounds.md)
 
 [12. Map utils](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/12-map-utils.md)
 
