@@ -33,15 +33,15 @@ Lớp MFBuilding cho phép người dùng vẽ một building lên map.
 
 ## 2. Tạo Building
 
-  -  ![MAP4DSDK](https://raw.githubusercontent.com/iotlinkadmin/map4d-ios-sdk/master/docs/resource/3-marker.png) 
+  -  ![MAP4DSDK](../resource/../../resource/v1.4/user-building.png) 
   
 ```switf
-  building = MFBuilding()
-  building?.position = CLLocationCoordinate2DMake(16.089320490217876, 108.22608232498169)
-  building?.name = "User Building"
-  building?.model = "https://sw-hcm-1.vinadata.vn/v1/AUTH_d0ecabcbdcd74f6aa6ac9a5da528eb78/sdk/models/5b21d9a5cd18d02d045a5e99"
-  building?.texture = "https://sw-hcm-1.vinadata.vn/v1/AUTH_d0ecabcbdcd74f6aa6ac9a5da528eb78/sdk/textures/0cb35e1610c34e55946a7839356d8f66.jpg"
-  building?.map = mapView
+  let building = MFBuilding()
+  building.position = CLLocationCoordinate2DMake(16.08795975082965, 108.22837829589844)
+  building.name = "User Building"
+  building.model = "https://sw-hcm-1.vinadata.vn/v1/AUTH_d0ecabcbdcd74f6aa6ac9a5da528eb78/sdk/models/5b21d9a5cd18d02d045a5e99"
+  building.texture = "https://sw-hcm-1.vinadata.vn/v1/AUTH_d0ecabcbdcd74f6aa6ac9a5da528eb78/sdk/textures/0cb35e1610c34e55946a7839356d8f66.jpg"
+  building.map = mapView
 ```
 
 ## 3. Sự kiện click Building

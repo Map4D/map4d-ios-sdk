@@ -30,19 +30,19 @@ Lớp MFURLTileLayer cho phép người dùng vẽ raster tile chồng lên map4
 
 ## 3. Tạo Tile Overlay
 
-  -  ![MAP4DSDK](https://raw.githubusercontent.com/iotlinkadmin/map4d-ios-sdk/master/docs/resource/3-marker.png) 
+  -  ![MAP4DSDK](../resource/v1.4/../../../resource/v1.4/tile-overlay.png) 
   
 ```switf
-    class TileUrlConstructor : NSObject, MFTileURLConstructor {
+  class TileUrlConstructor : NSObject, MFTileURLConstructor {
     func getTileUrlWith(x: UInt, y: UInt, zoom: UInt, is3dMode: Bool) -> URL? {
         if (is3dMode) {
         return nil
         }
         return URL(string: "https://tile.openstreetmap.de/\(zoom)/\(x)/\(y).png")
     }
-    }
-    let tileOverlay = MFURLTileLayer(urlConstructor: TileUrlConstructor())
-    tileOverlay.map = mapView
+  }
+  let tileOverlay = MFURLTileLayer(urlConstructor: TileUrlConstructor())
+  tileOverlay.map = mapView
 ```
 
 License

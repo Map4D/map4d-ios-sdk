@@ -25,7 +25,7 @@ Lớp MFGroundOverlay cho phép người dùng vẽ raster tile chồng lên map
 
 ## 2. Tạo Ground Overlay
 
-  -  ![MAP4DSDK](https://raw.githubusercontent.com/iotlinkadmin/map4d-ios-sdk/master/docs/resource/3-marker.png) 
+  -  ![MAP4DSDK](../../resource/v1.4/ground-overlay.png) 
   
 ```switf
     let bounds = MFCoordinateBounds(coordinate: CLLocationCoordinate2DMake(16.057814922971613, 108.22065353393553),
@@ -36,9 +36,9 @@ Lớp MFGroundOverlay cho phép người dùng vẽ raster tile chồng lên map
 
 ```switf
     class TileUrlConstructor : NSObject, MFTileURLConstructor {
-    func getTileUrlWith(x: UInt, y: UInt, zoom: UInt, is3dMode: Bool) -> URL? {
-        return URL(string: "https://tile.openstreetmap.de/\(zoom)/\(x)/\(y).png")
-    }
+      func getTileUrlWith(x: UInt, y: UInt, zoom: UInt, is3dMode: Bool) -> URL? {
+          return URL(string: "https://tile.openstreetmap.de/\(zoom)/\(x)/\(y).png")
+      }
     }
     let bounds = MFCoordinateBounds(coordinate: CLLocationCoordinate2DMake(16.067588780844506, 108.18391799926758),
                                     coordinate1: CLLocationCoordinate2DMake(16.075671439786362, 108.19833755493164))

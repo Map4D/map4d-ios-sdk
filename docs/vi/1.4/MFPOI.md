@@ -29,11 +29,11 @@ Lớp MFPOI cho phép người dùng vẽ một POI lên map.
 
 ## 2. Tạo POI
 
-  -  ![MAP4DSDK](https://raw.githubusercontent.com/iotlinkadmin/map4d-ios-sdk/master/docs/resource/3-marker.png) 
+  -  ![MAP4DSDK](../../resource/v1.4/user-poi.png) 
   
 ```switf
   let poi = MFPOI()
-  poi.position = CLLocationCoordinate2DMake(16.08929987302396, 108.22627544403076)
+  poi.position = CLLocationCoordinate2DMake(16.07558896533373, 108.2243013381958)
   poi.title = "Map4D Cafe"
   poi.zIndex = 2
   poi.type = "cafe"

@@ -27,8 +27,6 @@ Lớp MFURLBuildingLayer cho phép người dùng thêm vào các đối tượn
 ```
 
 ## 3. Tạo Building Overlay
-
-  -  ![MAP4DSDK](https://raw.githubusercontent.com/iotlinkadmin/map4d-ios-sdk/master/docs/resource/3-marker.png) 
   
 ```switf
     class BuildingUrlConstructor : NSObject, MFBuildingURLConstructor {
