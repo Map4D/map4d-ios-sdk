@@ -23,7 +23,7 @@
     ```
     - Hoặc click vào info.plist thêm access key như hình:
     
-    - ![MAP4DSDK](https://raw.githubusercontent.com/iotlinkadmin/map4d-ios-sdk/master/docs/resource/v1.4/0-accessKey.png)
+    - ![MAP4DSDK](https://raw.githubusercontent.com/map4d/map4d-ios-sdk/master/docs/resource/v1.4/0-accessKey.png)
     
     - Tạo 1 view chứa MAP4D
     ```swift
