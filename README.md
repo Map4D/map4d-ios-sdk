@@ -44,33 +44,41 @@ class ViewController: UIViewController {
 ```
 
 ## Document references
-[1. Getting started](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/0-getting-started.md) 
+[1. Getting started](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/0-getting-started.md) 
 
-[2. Map user interaction](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/1-map-user-interaction.md) 
+[2. Map user interaction](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/1-map-user-interaction.md) 
 
-[3. Type](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/2-type.md)
+[3. Type](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/2-type.md)
 
-[4. Map events](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/3-map-events.md)
+[4. Map events](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/3-map-events.md)
 
-[5. Marker](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/4-marker.md)
+[5. Marker](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/4-marker.md)
 
-[6. Polyline](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/5-polyline.md)
+[6. Polyline](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/5-polyline.md)
 
-[7. Polygon](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/6-polygon.md)
+[7. Polygon](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/6-polygon.md)
 
-[8. Circle](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/7-circle.md)
+[8. Circle](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/7-circle.md)
 
-[9. 3D objects](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/8-3d-objecrt.md)
+[9. 3D objects](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/8-3d-objecrt.md)
 
-[10. Tile area](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/9-tile-area.md)
+[10. Effect map](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/10-effect-map.md)
 
-[11. Effect map](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/10-effect-map.md)
+[111. LatLngBounds](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/11-lat-lng-bounds.md)
 
-[12. LatLngBounds](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/11-lat-lng-bounds.md)
+[12. Map utils](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/12-map-utils.md)
 
-[13. Map utils](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/12-map-utils.md)
+[13. Place](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/13-place.md)
 
-[14. Place](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.2/13-place.md)
+[14. POI](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFPOI.md)
+
+[15. Building](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFBuilding.md)
+
+[16. Tile Overlay](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFTileOverlay.md)
+
+[17. Building Overlay](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFBuildingOverlay.md)
+
+[18. Ground Overlay](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFGroundOverlay.md)
 
 
 License
