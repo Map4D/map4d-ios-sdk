@@ -1,6 +1,6 @@
-#Đối tượng 3D trên map
+# Đối tượng 3D trên map
 
-##1. Bật tắt chế độ 3D
+## 1. Bật tắt chế độ 3D
 
   - Để bật tắt chế độ 3D sử dụng:
     ```switf
@@ -12,7 +12,7 @@
      - **true** : Bật chế độ 3D, tại chế độ này khi map sẽ ở mức zoom >= 17 và hiển thị các đối tượng 3D
      - **false** : Tắt chế độ 3D, map sẽ ở chế độ 2D ở mọi mức zoom
   
-##2. Thay đổi thời gian của map
+## 2. Thay đổi thời gian của map
  
  - Map 4D SDK cho phép người dùng thiết lập thời gian cho map, dữ liệu 3D và các địa điểm sẽ được lấy theo thời gian người dùng thiết lập, mặc định sẽ lấy thời gian hiện tại.
  
