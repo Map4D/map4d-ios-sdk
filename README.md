@@ -78,7 +78,9 @@ class ViewController: UIViewController {
 
 [17. Building Overlay](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFBuildingOverlay.md)
 
-[18. Ground Overlay](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFGroundOverlay.md)
+[18. POI Overlay](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFPOIOverlay.md)
+
+[19. Ground Overlay](https://github.com/map4d/map4d-ios-sdk/blob/master/docs/vi/1.4/MFGroundOverlay.md)
 
 
 License
