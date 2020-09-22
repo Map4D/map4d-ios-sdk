@@ -7,12 +7,15 @@ Lớp MFURLBuildingLayer cho phép người dùng thêm vào các đối tượn
 - Static method:
     + buildingLayerWithURLConstructor:
         + Tạo MFURLBuildingLayer với URLConstructor, cần implement MFBuildingURLConstructor
+    + buildingLayerWithURLConstructor:prefixId:
+        + Tạo MFURLBuildingLayer với URLConstructor và prefixId, prefixId sẽ được thêm vào phía trước id của mỗi building (nhằm tránh hiện tượng building id của các overlay trùng với building id của map4D)
 
 - Properties:
     - map:MFMapView
         - Map view hiển thị building overlay
     - isHidden:bool
         - Cho phép ẩn building overlay khỏi map
+    - prefixId:String(readonly)
 
 - Methods:
     - clearBuildingCache

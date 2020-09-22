@@ -7,12 +7,15 @@ Lớp MFURLPOILayer cho phép thêm vào các đối tượng POIs theo tile
 - Static method:
     + poiLayerWithURLConstructor:
         + Tạo MFURLPOILayer với URLConstructor, cần implement MFPOIURLConstructor
+    + poiLayerWithURLConstructor:prefixId:
+        + Tạo MFURLPOILayer với URLConstructor và prefixId, prefixId sẽ được thêm vào phía trước id của mỗi POI (nhằm tránh hiện tượng POI id của các overlay trùng với POI id của map4D)
 
 - Properties:
     - map:MFMapView
         - Map view hiển thị POI overlay
     - isHidden:bool
         - Cho phép ẩn POI overlay khỏi map
+    - prefixId:String(readonly)
 
 - Methods:
     - clearPOICache
