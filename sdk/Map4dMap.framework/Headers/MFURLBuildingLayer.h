@@ -18,7 +18,10 @@
 
 @interface MFURLBuildingLayer : MFOverlay
 
+@property(nonatomic, copy, readonly, nullable) NSString* prefixId;
+
 + (instancetype _Nonnull) buildingLayerWithURLConstructor:(id<MFBuildingURLConstructor> _Nonnull)constructor;
++ (instancetype _Nonnull) buildingLayerWithURLConstructor:(id<MFBuildingURLConstructor> _Nonnull)constructor prefixId:(NSString* _Nullable)prefixId;
 
 - (void) clearBuildingCache;
 

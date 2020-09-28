@@ -34,8 +34,14 @@
 - (void)mapView: (MFMapView*)  mapView idleAtCameraPosition: (MFCameraPosition *) position;
 - (void)mapView: (MFMapView*)  mapView didTapAtCoordinate: (CLLocationCoordinate2D) coordinate;
 - (void)mapView: (MFMapView*)  mapView onModeChange: (bool) is3DMode;
+/* Called after a building annotation has been tapped */
 - (void)mapView: (MFMapView*)  mapView didTapBuilding: (MFBuilding*) building;
+/* Called after a base map building has been tapped */
+- (void)mapView: (MFMapView*)  mapView didTapBuildingWithBuildingID: (NSString*) buildingID name: (NSString*) name location: (CLLocationCoordinate2D) location;
+/* Called after a POI annotation has been tapped */
 - (void)mapView: (MFMapView*)  mapView didTapPOI: (MFPOI*) poi;
+/* Called after a base map POI has been tapped */
+- (void)mapView: (MFMapView*)  mapView didTapPOIWithPlaceID: (NSString*) placeID name: (NSString*) name location: (CLLocationCoordinate2D) location;
 - (void)mapView: (MFMapView*)  mapView didTapMyLocation: (CLLocationCoordinate2D) location;
 
 - (BOOL)shouldChangeMapModeForMapView: (MFMapView*)  mapView;

@@ -14,8 +14,6 @@
 
 @interface MFBuilding : MFOverlay
 
-@property(nonatomic, copy, nullable, readonly) NSString* buildingId;
-
 @property(nonatomic, strong, nullable) NSString* name;
 
 @property(nonatomic) CLLocationCoordinate2D position;
@@ -37,7 +35,6 @@
 @property(nonatomic, getter=isSelected) bool selected;
 
 @property(nonatomic, strong, nullable) NSMutableArray* types;
-@property(nonatomic, strong, nullable) NSMutableArray* places;
 @property(nonatomic) double minZoom;
 @property(nonatomic) double maxZoom;
 @property(nonatomic) NSDate* _Nullable startDate;

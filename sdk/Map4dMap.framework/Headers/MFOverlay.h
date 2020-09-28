@@ -12,7 +12,6 @@
 #import <UIKit/UIKit.h>
 
 #define ANNOTATION_ID_NONE 0
-#define TILEAREA_ID_NONE 0
 #define OVERLAY_ID_NONE 0
 
 @class MFMapView;

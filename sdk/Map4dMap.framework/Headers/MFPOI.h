@@ -12,8 +12,6 @@
 
 @interface MFPOI : MFOverlay
 
-@property(nonatomic, copy, nullable, readonly) NSString* placeId;
-
 @property(nonatomic) CLLocationCoordinate2D position;
 
 @property(nonatomic, strong, nullable) NSString* title;
