@@ -12,6 +12,8 @@
 
 @interface MFUISettings : NSObject
 
+@property(nonatomic, assign) BOOL myLocationButton;
+
 @property(nonatomic, assign) BOOL scrollGestures;
 
 @property(nonatomic, assign) BOOL zoomGestures;

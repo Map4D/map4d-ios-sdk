@@ -44,7 +44,7 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
 
   // Enable My Location
   - (void) setMyLocationEnabled: (bool) _isMyLocationEnable;
-
+  - (CLLocation* _Nullable) getMyLocation;
 
   // Set selected place
   - (void) setSelectedPlace: (NSString* _Nullable) placeId;
