@@ -39,6 +39,7 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
 
   @property(nonatomic, strong, readonly, nonnull) MFUISettings *settings;
 
+  @property (nonatomic) CGFloat nativeScale;
 
   - (instancetype _Nonnull )initWithFrame: (CGRect)frame;
 
