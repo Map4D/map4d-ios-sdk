@@ -9,10 +9,13 @@
 #define MFURLBuildingLayer_h
 
 #import "MFOverlay.h"
+#import "MFBuildingData.h"
 
 @protocol MFBuildingURLConstructor <NSObject>
 
 - (NSURL* _Nullable) getBuildingUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
+
+- (NSArray<MFBuildingData*>* _Nullable) parserBuildingData:(NSString* _Nonnull)data;
 
 @end
 

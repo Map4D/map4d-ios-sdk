@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name              = 'Map4dMap'
-    s.version           = '1.4.8'
+    s.version           = '1.5.0'
     s.summary           = 'Map4D SDK'
     s.homepage          = 'http://map4d.vn'
 
@@ -10,6 +10,6 @@ Pod::Spec.new do |s|
     s.platform          = :ios
     s.source = { :git => 'https://github.com/map4d/map4d-ios-sdk.git', :tag => s.version.to_s }
 
-    s.ios.deployment_target = '10.0'
+    s.ios.deployment_target = '9.0'
     s.ios.vendored_frameworks = 'sdk/Map4dMap.framework'
 end

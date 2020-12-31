@@ -9,10 +9,13 @@
 #define MFURLPOILayer_h
 
 #import "MFOverlay.h"
+#import "MFPOIData.h"
 
 @protocol MFPOIURLConstructor <NSObject>
 
 - (NSURL* _Nullable) getPOIUrlWithX:(NSUInteger)x y:(NSUInteger)y zoom:(NSUInteger)zoom;
+
+- (NSArray<MFPOIData*>* _Nullable) parserPOIData:(NSString* _Nonnull)data;
 
 @end
 
