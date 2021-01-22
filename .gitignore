@@ -70,3 +70,4 @@ fastlane/test_output
 */Pods/*
 *.xcworkspace
 *.xcworkspace/*
+examples/ios-sdk-examples/Pods

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="5dm-wl-jSE">
+            <objects>
+                <viewController storyboardIdentifier="POIViewController" id="sbH-Wn-5OJ" customClass="POIViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uGH-z7-6de">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTy-WI-nsA" customClass="MFMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbY-hy-QI8">
+                                <rect key="frame" x="20" y="64" width="100" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2Bc-4r-Ukc"/>
+                                    <constraint firstAttribute="width" constant="100" id="YSH-Kf-eCv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Add POI">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapAdd:" destination="sbH-Wn-5OJ" eventType="touchUpInside" id="3Nu-ND-1dy"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Uu-uQ-I8S">
+                                <rect key="frame" x="130" y="64" width="264" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="blr-fq-YMU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8w-xF-9bx">
+                                <rect key="frame" x="20" y="114" width="100" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="8h6-VM-EQg"/>
+                                    <constraint firstAttribute="width" constant="100" id="m50-x0-1Ol"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <state key="normal" title="Remove POI">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapRemove:" destination="sbH-Wn-5OJ" eventType="touchUpInside" id="zsq-wr-FSu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rYN-l5-Def"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rYN-l5-Def" firstAttribute="trailing" secondItem="3Uu-uQ-I8S" secondAttribute="trailing" constant="20" id="2PX-vJ-iBa"/>
+                            <constraint firstItem="bbY-hy-QI8" firstAttribute="leading" secondItem="rYN-l5-Def" secondAttribute="leading" constant="20" id="9E5-DE-7pa"/>
+                            <constraint firstItem="bbY-hy-QI8" firstAttribute="top" secondItem="rYN-l5-Def" secondAttribute="top" constant="20" id="FIg-C6-Msz"/>
+                            <constraint firstItem="3Uu-uQ-I8S" firstAttribute="centerY" secondItem="bbY-hy-QI8" secondAttribute="centerY" id="Rfa-lK-1nJ"/>
+                            <constraint firstItem="rYN-l5-Def" firstAttribute="trailing" secondItem="XTy-WI-nsA" secondAttribute="trailing" id="Vtw-ep-veb"/>
+                            <constraint firstItem="u8w-xF-9bx" firstAttribute="leading" secondItem="bbY-hy-QI8" secondAttribute="leading" id="fJ0-Wd-x05"/>
+                            <constraint firstItem="XTy-WI-nsA" firstAttribute="leading" secondItem="uGH-z7-6de" secondAttribute="leading" id="hhe-aM-IMf"/>
+                            <constraint firstItem="3Uu-uQ-I8S" firstAttribute="leading" secondItem="bbY-hy-QI8" secondAttribute="trailing" constant="10" id="hjf-lE-Qqm"/>
+                            <constraint firstAttribute="bottom" secondItem="XTy-WI-nsA" secondAttribute="bottom" id="kBY-gy-m94"/>
+                            <constraint firstItem="XTy-WI-nsA" firstAttribute="top" secondItem="uGH-z7-6de" secondAttribute="top" id="kRs-1U-ibY"/>
+                            <constraint firstItem="u8w-xF-9bx" firstAttribute="top" secondItem="bbY-hy-QI8" secondAttribute="bottom" constant="10" id="re8-Zc-AUg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="XTy-WI-nsA" id="JRl-gk-U0J"/>
+                        <outlet property="removePOIButton" destination="u8w-xF-9bx" id="sEm-ky-m7j"/>
+                        <outlet property="titleLabel" destination="3Uu-uQ-I8S" id="T6s-xX-VK0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fw1-Ee-dBF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="-14"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

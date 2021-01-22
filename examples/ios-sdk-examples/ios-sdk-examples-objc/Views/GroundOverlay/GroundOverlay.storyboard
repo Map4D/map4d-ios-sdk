@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ground Overlay View Controller-->
+        <scene sceneID="whq-dN-Qvg">
+            <objects>
+                <viewController storyboardIdentifier="GroundOverlayViewController" id="lZr-HQ-r4M" customClass="GroundOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Amp-R4-H7e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyC-6A-ahC" customClass="MFMapView">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="HzS-O8-946"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="wyC-6A-ahC" secondAttribute="bottom" id="G4h-BX-9iQ"/>
+                            <constraint firstItem="wyC-6A-ahC" firstAttribute="leading" secondItem="HzS-O8-946" secondAttribute="leading" id="GbG-bc-jIR"/>
+                            <constraint firstItem="wyC-6A-ahC" firstAttribute="top" secondItem="HzS-O8-946" secondAttribute="top" id="O80-sC-s7A"/>
+                            <constraint firstItem="HzS-O8-946" firstAttribute="trailing" secondItem="wyC-6A-ahC" secondAttribute="trailing" id="k9B-Fe-ywl"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="wyC-6A-ahC" id="61f-EX-N1J"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6Tt-uY-98a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="144.92753623188406" y="118.52678571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
