@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Setting View Controller-->
+        <scene sceneID="V8U-vu-0Wc">
+            <objects>
+                <viewController storyboardIdentifier="SettingViewController" id="ccz-BU-trG" customClass="SettingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BjG-uJ-xE8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ywt-4v-2TP" customClass="MFMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNX-mJ-pVN">
+                                <rect key="frame" x="20" y="64" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="MYN-dk-MqR"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="ggQ-xa-Qt3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="IOT LINK">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yek-Z0-Rn4">
+                                <rect key="frame" x="20" y="124" width="160" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="7mL-Sb-R52"/>
+                                    <constraint firstAttribute="height" constant="40" id="brX-Kg-srd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Enable Mylocation">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="enableMylocation:" destination="ccz-BU-trG" eventType="touchUpInside" id="KWN-Gj-gKe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V17-wB-NmW">
+                                <rect key="frame" x="20" y="184" width="160" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="oum-wn-A1b"/>
+                                    <constraint firstAttribute="width" constant="160" id="u2v-mf-96K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Mode 2D/3D">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapMode:" destination="ccz-BU-trG" eventType="touchUpInside" id="Avp-ee-yhR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3W-Gq-fhz">
+                                <rect key="frame" x="20" y="244" width="160" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2fv-x5-l5J"/>
+                                    <constraint firstAttribute="width" constant="160" id="IYg-sJ-DDb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Set time">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapSetTime:" destination="ccz-BU-trG" eventType="touchUpInside" id="rWF-NS-c5U"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L6m-zI-DEX">
+                                <rect key="frame" x="20" y="304" width="160" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Pgu-g7-YhW"/>
+                                    <constraint firstAttribute="height" constant="40" id="fqJ-9i-lMh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Move camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapMove:" destination="ccz-BU-trG" eventType="touchUpInside" id="el0-gy-TQc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6H-2h-AED">
+                                <rect key="frame" x="20" y="364" width="160" height="40"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fSR-pa-QnS"/>
+                                    <constraint firstAttribute="width" constant="160" id="yvk-vE-6cc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <state key="normal" title="Animate Camera">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="didTapAnimate:" destination="ccz-BU-trG" eventType="touchUpInside" id="b87-9p-wsa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fj5-ys-roE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="b6H-2h-AED" firstAttribute="top" secondItem="L6m-zI-DEX" secondAttribute="bottom" constant="20" id="3hz-Tb-EDe"/>
+                            <constraint firstItem="o3W-Gq-fhz" firstAttribute="leading" secondItem="fj5-ys-roE" secondAttribute="leading" constant="20" id="4he-XN-KqK"/>
+                            <constraint firstItem="fj5-ys-roE" firstAttribute="trailing" secondItem="ywt-4v-2TP" secondAttribute="trailing" id="RwU-2R-rMR"/>
+                            <constraint firstAttribute="bottom" secondItem="ywt-4v-2TP" secondAttribute="bottom" id="V3b-LY-bJB"/>
+                            <constraint firstItem="o3W-Gq-fhz" firstAttribute="top" secondItem="V17-wB-NmW" secondAttribute="bottom" constant="20" id="XVa-5E-wJG"/>
+                            <constraint firstItem="L6m-zI-DEX" firstAttribute="leading" secondItem="o3W-Gq-fhz" secondAttribute="leading" id="Y0a-Rt-2Q4"/>
+                            <constraint firstItem="V17-wB-NmW" firstAttribute="top" secondItem="yek-Z0-Rn4" secondAttribute="bottom" constant="20" id="bVt-u9-tNX"/>
+                            <constraint firstItem="vNX-mJ-pVN" firstAttribute="top" secondItem="fj5-ys-roE" secondAttribute="top" constant="20" id="gSJ-hT-gWE"/>
+                            <constraint firstItem="yek-Z0-Rn4" firstAttribute="leading" secondItem="fj5-ys-roE" secondAttribute="leading" constant="20" id="gqE-vC-Kdv"/>
+                            <constraint firstItem="vNX-mJ-pVN" firstAttribute="leading" secondItem="fj5-ys-roE" secondAttribute="leading" constant="20" id="htb-mm-a3M"/>
+                            <constraint firstItem="b6H-2h-AED" firstAttribute="leading" secondItem="L6m-zI-DEX" secondAttribute="leading" id="i0C-2V-h54"/>
+                            <constraint firstItem="L6m-zI-DEX" firstAttribute="top" secondItem="o3W-Gq-fhz" secondAttribute="bottom" constant="20" id="k6P-gJ-Clm"/>
+                            <constraint firstItem="ywt-4v-2TP" firstAttribute="top" secondItem="BjG-uJ-xE8" secondAttribute="top" id="lPV-Sf-y6q"/>
+                            <constraint firstItem="yek-Z0-Rn4" firstAttribute="top" secondItem="fj5-ys-roE" secondAttribute="top" constant="80" id="oq1-rw-Zdi"/>
+                            <constraint firstItem="ywt-4v-2TP" firstAttribute="leading" secondItem="fj5-ys-roE" secondAttribute="leading" id="sS6-6E-nfe"/>
+                            <constraint firstItem="fj5-ys-roE" firstAttribute="trailing" secondItem="vNX-mJ-pVN" secondAttribute="trailing" constant="20" id="st6-m7-o53"/>
+                            <constraint firstItem="V17-wB-NmW" firstAttribute="leading" secondItem="yek-Z0-Rn4" secondAttribute="leading" id="xy2-dM-76O"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="ywt-4v-2TP" id="cWy-YI-btu"/>
+                        <outlet property="titleButton" destination="vNX-mJ-pVN" id="FDg-LV-5Xy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XKq-wL-lRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

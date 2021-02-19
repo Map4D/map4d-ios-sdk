@@ -1,11 +1,32 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '10.0'
 
-target 'ios-sdk-examples' do
+workspace 'ios-sdk-examples'
+project 'ios-sdk-examples-swift.xcodeproj'
+project 'ios-sdk-examples-objc.xcodeproj'
+
+def common_pods
+  pod 'Map4dMap', '~> 1.5.0'
+end
+
+target 'ios-sdk-examples-swift' do
+  project 'ios-sdk-examples-swift.xcodeproj'
+
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   
   # Pods for ios-sdk-examples
-  pod 'Map4dMap', '~> 1.4.4'
+  common_pods
+
+end
+
+target 'ios-sdk-examples-objc' do
+  project 'ios-sdk-examples-objc.xcodeproj'
+
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for ios-sdk-examples-objc
+  common_pods
 
 end
