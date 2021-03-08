@@ -1,5 +1,8 @@
 # Map4DMap SDK Change Logs
 
+## Version 1.5.1
+* Update logo sdk
+
 ## Version 1.5.0
 * Limit 15 FPS khi Map ở chế độ 3D mode và có hiệu ứng nước
 * Thay đổi header signature
