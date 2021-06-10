@@ -72,8 +72,6 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
 
   - (void) enable3DMode: (bool) enabled;
 
-  - (void) setTileUrl: (NSString* _Nonnull) url;
-
   // Get Mode
   - (bool) is3DMode;
 
