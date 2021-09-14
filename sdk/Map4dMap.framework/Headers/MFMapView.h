@@ -10,18 +10,25 @@
 #import <CoreLocation/CoreLocation.h>
 #import "MFUISettings.h"
 
+#define FPS_PREFERRED_NORMAL 0
+#define FPS_LIMITED_3D_EFFECT 15
+
 @protocol MFMapViewDelegate;
 @protocol LocationManagerDelegate;
 @class MFProjection;
 @class MFCameraPosition;
 @class MFCoordinateBounds;
 
-typedef NS_ENUM(NSUInteger, MFSwitchMode) {
-  MFSwitchModeDefault,
-  MFSwitchModeAuto2DTo3D,
-  MFSwitchModeAuto3DTo2D,
-  MFSwitchModeAuto,
-  MFSwitchModeManual
+/**
+ * Display types for MFMapView.
+ */
+typedef NS_ENUM(NSUInteger, MFMapType) {
+  /** Roadmap maps.  The default. */
+  MFMapTypeRoadmap,
+
+  /** Raster maps. */
+  MFMapTypeRaster
+    
 };
 
 @interface MFMapView : UIView
@@ -31,13 +38,13 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   //Projection
   @property(nonatomic, readonly) MFProjection * _Nullable projection;
 
-  //SwitchMode
-  @property(nonatomic) MFSwitchMode switchMode; DEPRECATED_MSG_ATTRIBUTE("'switchMode' is no longer supports; use 'shouldChangeMapMode' delegate instead");
-
   // Camera
   @property(nonatomic, copy) MFCameraPosition * _Nullable camera;
 
   @property(nonatomic, strong, readonly, nonnull) MFUISettings *settings;
+
+  @property(nonatomic, assign) MFMapType mapType;
+
 
   @property (nonatomic) CGFloat nativeScale;
 
@@ -46,12 +53,6 @@ typedef NS_ENUM(NSUInteger, MFSwitchMode) {
   // Enable My Location
   - (void) setMyLocationEnabled: (bool) _isMyLocationEnable;
   - (CLLocation* _Nullable) getMyLocation;
-
-  // Set selected place
-  - (void) setSelectedPlace: (NSString* _Nullable) placeId;
-
-  // Get selected place
-  - (NSString* _Nullable) getSelectedPlace;
 
   // Set filter places place
   - (void) setFilterPlaces: (NSArray<NSString*>* _Nullable) filterPlaces;

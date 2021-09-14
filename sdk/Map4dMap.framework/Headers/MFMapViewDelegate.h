@@ -17,6 +17,7 @@
 @class MFPolyline;
 @class MFPolygon;
 @class MFCircle;
+@class MFDirectionsRenderer;
 
 @protocol MFMapViewDelegate<NSObject>
 @optional
@@ -42,7 +43,10 @@
 - (void)mapView: (MFMapView*)  mapView didTapPOI: (MFPOI*) poi;
 /* Called after a base map POI has been tapped */
 - (void)mapView: (MFMapView*)  mapView didTapPOIWithPlaceID: (NSString*) placeID name: (NSString*) name location: (CLLocationCoordinate2D) location;
+- (void)mapView: (MFMapView*)  mapView didTapPlaceWithName:(NSString*)name location:(CLLocationCoordinate2D)location;
 - (void)mapView: (MFMapView*)  mapView didTapMyLocation: (CLLocationCoordinate2D) location;
+
+- (void)mapView:(MFMapView*)mapView didTapDirectionsRenderer:(MFDirectionsRenderer*)renderer routeIndex:(NSUInteger)routeIndex;
 
 - (BOOL)shouldChangeMapModeForMapView: (MFMapView*)  mapView;
 - (BOOL)didTapMyLocationButtonForMapView: (MFMapView*) mapView;

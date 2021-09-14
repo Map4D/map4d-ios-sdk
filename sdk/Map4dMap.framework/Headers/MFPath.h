@@ -9,8 +9,12 @@
 #define MFPath_h
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface MFPath: NSObject
+
+- (NSUInteger)count;
+- (CLLocationCoordinate2D)coordinateAtIndex:(NSUInteger)index;
   
 @end
 

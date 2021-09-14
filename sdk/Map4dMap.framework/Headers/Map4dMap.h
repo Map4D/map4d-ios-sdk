@@ -24,3 +24,4 @@
 #import "MFURLTileLayer.h"
 #import "MFURLPOILayer.h"
 #import "MFGroundOverlay.h"
+#import "MFDirectionsRenderer.h"

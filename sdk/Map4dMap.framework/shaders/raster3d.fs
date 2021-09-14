@@ -12,6 +12,8 @@ uniform sampler2D u_texture;
 uniform sampler2D u_waterDisplacement;
 uniform sampler2D u_waterColor;
 
+uniform float u_fade;
+
 varying vec2 v_uv;
 
 vec4 calculateWaterColor(vec4 tileColor, sampler2D waterDispl, sampler2D waterColor, vec2 uv, float time) {
@@ -20,6 +22,7 @@ vec4 calculateWaterColor(vec4 tileColor, sampler2D waterDispl, sampler2D waterCo
 		vec2 displacement = texture2D( waterDispl, 4.0 * vec2(uv.x, uv.y + time )).rg;
 		vec2 offset = (displacement * 2.0 - 1.0) * 0.2;
 		vec4 color = texture2D(waterColor, uv * 2.0 + offset);
+		color.a *= u_fade;
 		return color;
 	} else {
 		return tileColor;
@@ -28,6 +31,7 @@ vec4 calculateWaterColor(vec4 tileColor, sampler2D waterDispl, sampler2D waterCo
 
 void main() {
     vec4 tileColor = texture2D(u_texture, v_uv);
+	tileColor.a *= u_fade;
 	vec4 vertexColor = u_enableWater == 0 ? tileColor : calculateWaterColor(tileColor, u_waterDisplacement, u_waterColor, v_uv, u_time);
     // fog
     float dist = (gl_FragCoord.z / gl_FragCoord.w);
