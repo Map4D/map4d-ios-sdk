@@ -13,7 +13,7 @@
 
 @interface MFPath: NSObject
 
-- (NSUInteger)count;
+@property (readonly, getter=getCount) NSUInteger count;
 - (CLLocationCoordinate2D)coordinateAtIndex:(NSUInteger)index;
   
 @end

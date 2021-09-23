@@ -1,12 +1,4 @@
-{
-  "debug1": {
-    "camera": {
-      "zoom": 16,
-      "target": [106.708722,10.769227]
-    },
-    "env": "test",
-    "format": "mvt"
-  },
+{  
   "layers": {
     "earth": {
       "draw": {

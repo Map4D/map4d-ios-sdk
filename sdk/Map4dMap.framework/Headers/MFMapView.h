@@ -106,4 +106,9 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
  */
 - (nullable MFCameraPosition*) cameraForBounds: (nonnull MFCoordinateBounds*) bounds;
 
+/**
+ Get current MapView bounds
+ */
+- (nullable MFCoordinateBounds*)getBounds;
+
 @end

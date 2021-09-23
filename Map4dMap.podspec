@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
     s.name              = 'Map4dMap'
-    s.version           = '2.0-beta'
-    s.summary           = 'Map4D SDK'
+    s.version           = '2.0.0'
+    s.summary           = 'Map4dMap SDK'
     s.homepage          = 'http://map4d.vn'
 
     s.author            = { 'Sua Le' => 'sua8051@gmail.com' }
