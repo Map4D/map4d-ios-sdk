@@ -30,9 +30,6 @@ class Map2dViewController: UIViewController {
         // Anchor
         markerInCamera.groundAnchor = CGPoint(x: 0.5, y: 1.0)
         markerInCamera.map = map4d
-    
-        // set only 2D Mode
-        map4d.switchMode = MFSwitchMode.manual
     }
   
 

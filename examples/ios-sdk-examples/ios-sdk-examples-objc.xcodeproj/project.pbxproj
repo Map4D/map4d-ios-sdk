@@ -46,6 +46,8 @@
 		44F7C1C225CA802F00E25914 /* Delegate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F7C1C125CA802F00E25914 /* Delegate.storyboard */; };
 		44F7C1C725CA804C00E25914 /* DelegateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F7C1C625CA804C00E25914 /* DelegateViewController.m */; };
 		82B54A92D1F3838BB1744F0A /* Pods_ios_sdk_examples_objc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A93377437756845784B2BDC /* Pods_ios_sdk_examples_objc.framework */; };
+		E5BEEDD32701CBD0008D7580 /* DirectionsRenderer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5BEEDD22701CBD0008D7580 /* DirectionsRenderer.storyboard */; };
+		E5BEEDD62701CCB6008D7580 /* DirectionsRendererViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5BEEDD52701CCB6008D7580 /* DirectionsRendererViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -112,6 +114,9 @@
 		44F7C1C625CA804C00E25914 /* DelegateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DelegateViewController.m; sourceTree = "<group>"; };
 		4A93377437756845784B2BDC /* Pods_ios_sdk_examples_objc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ios_sdk_examples_objc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D42C4199EDFAC79889B0BBFB /* Pods-ios-sdk-examples-objc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk-examples-objc.release.xcconfig"; path = "Target Support Files/Pods-ios-sdk-examples-objc/Pods-ios-sdk-examples-objc.release.xcconfig"; sourceTree = "<group>"; };
+		E5BEEDD22701CBD0008D7580 /* DirectionsRenderer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectionsRenderer.storyboard; sourceTree = "<group>"; };
+		E5BEEDD42701CCA9008D7580 /* DirectionsRendererViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectionsRendererViewController.h; sourceTree = "<group>"; };
+		E5BEEDD52701CCB6008D7580 /* DirectionsRendererViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DirectionsRendererViewController.m; sourceTree = "<group>"; };
 		E75F44A914C0C7811A0DA30D /* Pods-ios-sdk-examples-objc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk-examples-objc.debug.xcconfig"; path = "Target Support Files/Pods-ios-sdk-examples-objc/Pods-ios-sdk-examples-objc.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -235,6 +240,7 @@
 		44903E9C25BECAFD003B0689 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E5BEEDD12701CBA1008D7580 /* DirectionsRenderer */,
 				44F7C1C025CA7FFB00E25914 /* Delegate */,
 				44F7C1A925C905CF00E25914 /* Collection */,
 				04CCDCA725C94A09003EB491 /* Setting */,
@@ -341,6 +347,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E5BEEDD12701CBA1008D7580 /* DirectionsRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				E5BEEDD22701CBD0008D7580 /* DirectionsRenderer.storyboard */,
+				E5BEEDD42701CCA9008D7580 /* DirectionsRendererViewController.h */,
+				E5BEEDD52701CCB6008D7580 /* DirectionsRendererViewController.m */,
+			);
+			path = DirectionsRenderer;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -400,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				44F7C1AB25C9062C00E25914 /* Collection.storyboard in Resources */,
+				E5BEEDD32701CBD0008D7580 /* DirectionsRenderer.storyboard in Resources */,
 				04CCDC7325C904DA003EB491 /* BuildingViewController.storyboard in Resources */,
 				04CCDC8925C94615003EB491 /* PolygonViewController.storyboard in Resources */,
 				04CCDC8025C9400A003EB491 /* PolylineViewController.storyboard in Resources */,
@@ -486,6 +503,7 @@
 				44F7C1AF25C9066100E25914 /* CollectionViewController.m in Sources */,
 				44F7C1BA25C90D0600E25914 /* CellItem.m in Sources */,
 				44F7C1B425C9086D00E25914 /* CollectionTableCell.m in Sources */,
+				E5BEEDD62701CCB6008D7580 /* DirectionsRendererViewController.m in Sources */,
 				44F7C1C725CA804C00E25914 /* DelegateViewController.m in Sources */,
 				44DE81D025C165F500DE4CE4 /* POIOverlayViewController.m in Sources */,
 				44903E9225BECA04003B0689 /* main.m in Sources */,
@@ -639,6 +657,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.iotlink.ios-sdk-examples-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -658,6 +677,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.iotlink.ios-sdk-examples-objc";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";

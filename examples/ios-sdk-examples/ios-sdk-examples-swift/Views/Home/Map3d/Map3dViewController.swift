@@ -27,7 +27,6 @@ class Map3dViewController: UIViewController {
     // Anchor
     markerInCamera.groundAnchor = CGPoint(x: 0.5, y: 1.0)
     markerInCamera.map = map4d
-    map4d.switchMode = MFSwitchMode.manual
     // Set 3D Map
     map4d.enable3DMode(true)
     }

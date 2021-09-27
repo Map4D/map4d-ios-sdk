@@ -19,21 +19,6 @@ class SettingsViewController: UIViewController {
     super.viewDidLoad()
     self.navigationItem.title = "Map Setting"
     
-    // Set Mode Auto
-    // 3D Mode: zoom >= 17
-    // Zoom >= 17 auto Enable 3D, and zoom < 17 auto switch to 2D
-    map4d.switchMode = MFSwitchMode.auto
-    
-    /*description mode*/
-    /* MFSwitchMode.default = MFSwitchMode.auto3DTo2D
-     If you enable 3D Mode, It can auto switch to 2D if zoom < 17
-     * MFSwitchMode.manual
-     you must be set 2D or 3D mode manual, It cannot zoom to 2D if the current mode is 3D mode.
-     * MFSwitchMode.auto2DTo3D
-     It can auto switch to 3D if zoom >= 17
-     */
-    
-    
     // Move camera To
     // Han River Bridge in Da Nang
     let camera = MFCameraPosition(target: CLLocationCoordinate2DMake(16.070662,108.224940), zoom:  16)

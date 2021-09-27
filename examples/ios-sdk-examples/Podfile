@@ -1,12 +1,12 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '10.0'
+platform :ios, '9.0'
 
 workspace 'ios-sdk-examples'
 project 'ios-sdk-examples-swift.xcodeproj'
 project 'ios-sdk-examples-objc.xcodeproj'
 
 def common_pods
-  pod 'Map4dMap', '~> 1.5.0'
+  pod 'Map4dMap', '~> 2.0.0'
 end
 
 target 'ios-sdk-examples-swift' do
