@@ -79,6 +79,9 @@ class CollectionsViewController: UIViewController , UITableViewDataSource, UITab
     case .buildling:
       let storyBoard = UIStoryboard(name: "BuildingViewController", bundle: nil)
       viewController = storyBoard.instantiateViewController(withIdentifier: "BuildingViewController")
+    case .directionsRenderer:
+      let storyBoard = UIStoryboard(name: "DirectionsRenderer", bundle: nil)
+      viewController = storyBoard.instantiateViewController(withIdentifier: "DirectionsRenderer")
     }
     
     guard let vc = viewController else { return }

@@ -21,6 +21,8 @@
 		44F7C19325C8009700E25914 /* POIViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44F7C19125C8009700E25914 /* POIViewController.storyboard */; };
 		44F7C19425C8009700E25914 /* POIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F7C19225C8009700E25914 /* POIViewController.swift */; };
 		E1F6246A4D7F15B1479F2802 /* Pods_ios_sdk_examples_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 425892B266CE2667426AEC73 /* Pods_ios_sdk_examples_swift.framework */; };
+		E5BEEDCE2701BF27008D7580 /* DirectionsRenderer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5BEEDCD2701BF27008D7580 /* DirectionsRenderer.storyboard */; };
+		E5BEEDD02701BF56008D7580 /* DirectionsRendererViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5BEEDCF2701BF56008D7580 /* DirectionsRendererViewController.swift */; };
 		FF4C8D1A21E5F28C00A22AE9 /* CollectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C8D1921E5F28C00A22AE9 /* CollectionTableViewCell.swift */; };
 		FF4C8D1D21E5FE2100A22AE9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C8D1C21E5FE2100A22AE9 /* SettingsViewController.swift */; };
 		FF4C8D2721E60CC600A22AE9 /* MarkesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4C8D2621E60CC600A22AE9 /* MarkesViewController.swift */; };
@@ -75,6 +77,8 @@
 		44F7C19125C8009700E25914 /* POIViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = POIViewController.storyboard; sourceTree = "<group>"; };
 		44F7C19225C8009700E25914 /* POIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIViewController.swift; sourceTree = "<group>"; };
 		B702167016EE7E680156FFD1 /* Pods-ios-sdk-examples-swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk-examples-swift.release.xcconfig"; path = "Pods/Target Support Files/Pods-ios-sdk-examples-swift/Pods-ios-sdk-examples-swift.release.xcconfig"; sourceTree = "<group>"; };
+		E5BEEDCD2701BF27008D7580 /* DirectionsRenderer.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DirectionsRenderer.storyboard; sourceTree = "<group>"; };
+		E5BEEDCF2701BF56008D7580 /* DirectionsRendererViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsRendererViewController.swift; sourceTree = "<group>"; };
 		E7811C71B96879F6123191AF /* Pods-ios-sdk-examples-swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ios-sdk-examples-swift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ios-sdk-examples-swift/Pods-ios-sdk-examples-swift.debug.xcconfig"; sourceTree = "<group>"; };
 		FF4C8D1921E5F28C00A22AE9 /* CollectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionTableViewCell.swift; sourceTree = "<group>"; };
 		FF4C8D1C21E5FE2100A22AE9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +206,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E5BEEDCC2701BEF7008D7580 /* DirectionsRenderer */ = {
+			isa = PBXGroup;
+			children = (
+				E5BEEDCD2701BF27008D7580 /* DirectionsRenderer.storyboard */,
+				E5BEEDCF2701BF56008D7580 /* DirectionsRendererViewController.swift */,
+			);
+			path = DirectionsRenderer;
+			sourceTree = "<group>";
+		};
 		FF4C8D1B21E5FD8E00A22AE9 /* settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +313,7 @@
 		FF60E10A21E08E4F00BAB7CA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E5BEEDCC2701BEF7008D7580 /* DirectionsRenderer */,
 				44F7C19025C8009700E25914 /* POI */,
 				04FCB20325C7ED4E00420437 /* Building */,
 				44903DE925BE836E003B0689 /* TileOverlay */,
@@ -474,6 +488,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04FCB20625C7ED4E00420437 /* BuildingViewController.storyboard in Resources */,
+				E5BEEDCE2701BF27008D7580 /* DirectionsRenderer.storyboard in Resources */,
 				FF60E0E221E066FA00BAB7CA /* LaunchScreen.storyboard in Resources */,
 				44DE81DF25C26D0700DE4CE4 /* BuildingOverlay.storyboard in Resources */,
 				44903E0625BEADD8003B0689 /* TileOverlay.storyboard in Resources */,
@@ -565,6 +580,7 @@
 				FF4C8D3121E60D1600A22AE9 /* MyLocationViewController.swift in Sources */,
 				44DE822525C3E9BF00DE4CE4 /* CellItem.swift in Sources */,
 				FF4C8D2721E60CC600A22AE9 /* MarkesViewController.swift in Sources */,
+				E5BEEDD02701BF56008D7580 /* DirectionsRendererViewController.swift in Sources */,
 				04FCB20725C7ED4E00420437 /* BuildingViewController.swift in Sources */,
 				FF4C8D2921E60CE700A22AE9 /* PolylineViewController.swift in Sources */,
 				44DE81C625C158D900DE4CE4 /* POIOverlayViewController.swift in Sources */,
@@ -754,6 +770,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.iotlink.example.ios-sdk-examples";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -774,6 +791,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "vn.com.iotlink.example.ios-sdk-examples";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

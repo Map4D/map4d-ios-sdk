@@ -24,7 +24,8 @@ extension CollectionsViewController {
          poiOverlay,
          buildingOverlay,
          poi,
-         buildling
+         buildling,
+         directionsRenderer
     
     func icon() -> UIImage? {
       switch self {
@@ -56,6 +57,8 @@ extension CollectionsViewController {
         return UIImage(named: "ic_marker")
       case .buildling:
         return UIImage(named: "ic_tile")
+      case .directionsRenderer:
+        return UIImage(named: "ic_polyline")
       }
     }
     
@@ -89,6 +92,8 @@ extension CollectionsViewController {
         return "POI"
       case .buildling:
         return "Building"
+      case .directionsRenderer:
+        return "Directions Renderer"
       }
     }
     

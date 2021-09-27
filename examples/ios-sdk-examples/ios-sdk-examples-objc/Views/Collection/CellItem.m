@@ -23,6 +23,7 @@ typedef NS_ENUM(NSUInteger, Item) {
   buildingOverlay,
   poi,
   buildling,
+  directionsRenderer,
   
   /* max */
   MaximumItem
@@ -93,6 +94,9 @@ typedef NS_ENUM(NSUInteger, Item) {
     case buildling:
       return @"Building";
       break;
+    case directionsRenderer:
+      return @"Directions Renderer";
+      break;
 
     default:
       return nil;
@@ -143,6 +147,9 @@ typedef NS_ENUM(NSUInteger, Item) {
       break;
     case buildling:
       return [UIImage imageNamed:@"ic_tile"];
+      break;
+    case directionsRenderer:
+      return [UIImage imageNamed:@"ic_polyline"];
       break;
       
     default:
@@ -204,6 +211,10 @@ typedef NS_ENUM(NSUInteger, Item) {
     case buildling:
       sb = [UIStoryboard storyboardWithName: @"BuildingViewController" bundle:nil];
       return [sb instantiateViewControllerWithIdentifier:@"BuildingViewController"];
+      break;
+    case directionsRenderer:
+      sb = [UIStoryboard storyboardWithName:@"DirectionsRenderer" bundle:nil];
+      return [sb instantiateViewControllerWithIdentifier:@"DirectionsRenderer"];
       break;
     
     default:
