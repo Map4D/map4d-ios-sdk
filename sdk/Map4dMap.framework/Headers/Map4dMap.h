@@ -1,6 +1,6 @@
 //
-//  Map4D 2.0.0
-//  Created by Sua Le on 07/31/20.
+//  Map4D 2.0.1
+//  Created by Sua Le on 09/28/21.
 //  Copyright@2018 by IOT Link
 //
 
