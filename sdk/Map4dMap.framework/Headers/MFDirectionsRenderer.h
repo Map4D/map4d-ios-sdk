@@ -21,11 +21,13 @@
 @property(nonatomic, strong, nullable) NSArray<MFPath*>* routes;
 @property(nonatomic) NSUInteger activedIndex;
 
+@property(nonatomic) BOOL hideOriginPOI;
 @property(nonatomic) CLLocationCoordinate2D originPosition;
 @property(nonatomic, strong, nullable) UIImage* originIcon;
 @property(nonatomic, strong, nullable) NSString* originTitle;
 @property(nonatomic, strong, nonnull) UIColor* originTitleColor;
 
+@property(nonatomic) BOOL hideDestinationPOI;
 @property(nonatomic) CLLocationCoordinate2D destinationPosition;
 @property(nonatomic, strong, nullable) UIImage* destinationIcon;
 @property(nonatomic, strong, nullable) NSString* destinationTitle;
