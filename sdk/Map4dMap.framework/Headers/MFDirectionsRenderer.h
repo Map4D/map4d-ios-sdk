@@ -43,8 +43,8 @@
 @property(nonatomic) CGFloat inactiveOutlineWidth;
 @property(nonatomic, strong, nonnull) UIColor* inactiveOutlineColor;
 
-- (void)setRoutesWithJson:(NSString*)json;
-- (void)setDatas:(NSArray<NSData*>*)datas;
+- (void)setRoutesWithJson:(NSString* _Nullable) json;
+- (void)setDatas:(NSArray<NSData*>* _Nullable) datas;
 
 @end
 

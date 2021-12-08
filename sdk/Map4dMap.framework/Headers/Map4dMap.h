@@ -1,7 +1,7 @@
 //
-//  Map4D 2.0.5
+//  Map4D 2.0.6
 //  Created by Sua Le on 09/28/21.
-//  Copyright@2018 by IOT Link
+//  Copyright@2018 by IOTLink
 //
 
 #import <Foundation/Foundation.h>
