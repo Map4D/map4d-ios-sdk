@@ -14,6 +14,9 @@
 @interface MFPath: NSObject
 
 @property (readonly, getter=getCount) NSUInteger count;
+
++ (instancetype _Nonnull)pathFromEncodedPath:(NSString * _Nonnull)encodedPath;
+
 - (CLLocationCoordinate2D)coordinateAtIndex:(NSUInteger)index;
   
 @end
