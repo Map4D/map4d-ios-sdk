@@ -24,12 +24,14 @@
 @property(nonatomic) BOOL hideOriginPOI;
 @property(nonatomic) CLLocationCoordinate2D originPosition;
 @property(nonatomic, strong, nullable) UIImage* originIcon;
+@property(nonatomic) CGPoint originGroundAnchor;
 @property(nonatomic, strong, nullable) NSString* originTitle;
 @property(nonatomic, strong, nonnull) UIColor* originTitleColor;
 
 @property(nonatomic) BOOL hideDestinationPOI;
 @property(nonatomic) CLLocationCoordinate2D destinationPosition;
 @property(nonatomic, strong, nullable) UIImage* destinationIcon;
+@property(nonatomic) CGPoint destinationGroundAnchor;
 @property(nonatomic, strong, nullable) NSString* destinationTitle;
 @property(nonatomic, strong, nonnull) UIColor* destinationTitleColor;
 

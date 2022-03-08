@@ -26,6 +26,8 @@
 
 @property(nonatomic, strong, nullable) UIImage* icon;
 
+@property(nonatomic) CGPoint groundAnchor;
+
 /** A Boolean value that determines whether user events are ignored and removed from the event queue. */
 @property(nonatomic, getter=isUserInteractionEnabled) bool userInteractionEnabled;
 
