@@ -34,7 +34,8 @@
 - (void)mapView: (MFMapView*)  mapView didChangeCameraPosition:(MFCameraPosition*) position;
 - (void)mapView: (MFMapView*)  mapView idleAtCameraPosition: (MFCameraPosition *) position;
 - (void)mapView: (MFMapView*)  mapView didTapAtCoordinate: (CLLocationCoordinate2D) coordinate;
-- (void)mapView: (MFMapView*)  mapView onModeChange: (bool) is3DMode;
+- (void)mapView: (MFMapView*)  mapView onModeChange: (bool) is3DMode DEPRECATED_MSG_ATTRIBUTE("This method is no longer support, which is subject to removal in a future versions.");
+- (void)mapView: (MFMapView*)  mapView didReachLimitedZoom:(double)zoom;
 /* Called after a building annotation has been tapped */
 - (void)mapView: (MFMapView*)  mapView didTapBuilding: (MFBuilding*) building;
 /* Called after a base map building has been tapped */
@@ -48,7 +49,7 @@
 
 - (void)mapView:(MFMapView*)mapView didTapDirectionsRenderer:(MFDirectionsRenderer*)renderer routeIndex:(NSUInteger)routeIndex;
 
-- (BOOL)shouldChangeMapModeForMapView: (MFMapView*)  mapView;
+- (BOOL)shouldChangeMapModeForMapView: (MFMapView*)  mapView DEPRECATED_MSG_ATTRIBUTE("This method is no longer support. It is recommended that the 'didReachLimitedZoom' delegate be used instead. This method is subject to removal in a future versions.");
 - (BOOL)didTapMyLocationButtonForMapView: (MFMapView*) mapView;
 - (UIView *) mapView: (MFMapView *) mapView markerInfoWindow: (MFMarker *) marker;
 

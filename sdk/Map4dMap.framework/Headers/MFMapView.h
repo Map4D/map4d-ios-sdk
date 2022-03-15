@@ -27,8 +27,13 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
   MFMapTypeRoadmap,
 
   /** Raster maps. */
-  MFMapTypeRaster
-    
+  MFMapTypeRaster,
+  
+  /** Satellite maps. */
+  MFMapTypeSatellite,
+  
+  /** 3D maps. */
+  MFMapTypeMap3D,
 };
 
 @interface MFMapView : UIView
@@ -71,10 +76,10 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
   // Native Zoom
   - (void) setMaxNativeZoom: (double) zoom;
 
-  - (void) enable3DMode: (bool) enabled;
+  - (void) enable3DMode: (bool) enabled DEPRECATED_MSG_ATTRIBUTE("This method was intended to set map type map 3D. It has been superseded by 'mapType' property. This method is subject to removal in a future versions.");
 
   // Get Mode
-  - (bool) is3DMode;
+  - (bool) is3DMode DEPRECATED_MSG_ATTRIBUTE("This type of mode checking is not recommended. It is recommended that the 'mapType' property be used instead. This method is subject to removal in a future versions.");
 
   - (void) setMinZoom: (double) minZoom maxZoom: (double) maxZoom;
 

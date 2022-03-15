@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "pois": {
+      "draw": {
+        "points": {
+          "size": [[2,0],[15,12]],
+          "halo": {
+            "color": "#FFF"
+          }
+        }
+      }
+    }
+  }
+}

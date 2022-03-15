@@ -1,0 +1,292 @@
+{
+  "layers": {
+    "roads": {
+      "filter": {
+        "kind": [
+          "highway",
+          "major_road",
+          "minor_road",
+          "path"
+        ]
+      },
+      "draw": {
+        "lines": {
+          "color": "#696b6e2f",
+          "outline": {
+            "color": [[7,"#ececec2F"],[15,"#dadce02f"]],
+            "width": [[13,1]
+            ]
+          }
+        },
+        "text": {
+          "color": "#FFF",
+          "size": [[8,10],[17,12]],
+          "halo": {
+            "color": "#000"
+          }
+        }
+      },
+      "highway": {
+        "filter": {
+          "kind": [
+            "highway"
+          ]
+        },
+        "draw": {
+          "lines": {
+            "color": "#FBC0AC2F",
+            "width": [[7,1],[10,2],[14,3],[15,5],[16,8],[17,13],[18,20],[19,36]],
+            "outline": {
+              "color": "#F9A09C2F",
+              "width": [[11,1]]
+            }
+          },
+          "text": {
+            "size": [[8,12]]
+          }
+        }
+      },
+      "major_road": {
+        "filter": {
+          "kind": [
+            "major_road"
+          ]
+        },
+        "draw": {
+          "lines": {
+            "width": [[15,4],[16,8],[17,13],[18,20],[19,36]]
+          },
+          "text": {
+            "size": [[8,12]]
+          }
+        },
+        "primary": {
+          "filter": {
+            "kind_detail": [
+              "primary",
+              "primary_link"
+            ]
+          },
+          "draw": {
+            "lines": {
+              "width": [[15,5],[16,8],[17,13],[18,20],[19,36]]
+            },
+            "text": {
+              "size": 12
+            }
+          }
+        },
+        "trunk": {
+          "filter": {
+            "kind_detail": [
+              "trunk",
+              "trunk_link"
+            ]
+          },
+          "draw": {
+            "lines": {
+              "color": [[7,"#EBB97B2F"], [11, "#FDE2932F"]],
+              "width": [[7,1],[10,2],[14,3],[15,5],[16,8],[17,13],[18,20],[19,36]],                
+              "outline": {
+                "color": "#EBB97B2F",
+                "width": [[11,1]]
+              }
+            },
+            "text": {
+              "size": 12
+            }
+          }
+        }
+      },
+      "minor_road": {
+        "filter": {
+          "kind": [
+            "minor_road",
+            "path"
+          ]
+        },
+        "draw": {
+          "lines": {
+            "width": [[18,5],[19,10]]
+          }
+        },
+        "unclassified": {
+          "filter": {
+            "kind_detail": [
+              "unclassified"
+            ]
+          },
+          "draw": {
+            "lines": {
+              "width": [[17,7],[18,10],[19,20]]
+            }
+          }
+        },
+        "residential": {
+          "filter": {
+            "kind_detail": [
+              "residential"
+            ]
+          },
+          "draw": {
+            "lines": {
+              "width": [[17,7],[18,10],[19,20]]
+            }
+          }
+        }
+      }
+    },
+    "boundaries": {
+      "draw": {
+        "lines": {
+          "color": "#FFFFFF8F",
+          "width": [[2,0]]
+        },
+        "text": {
+          "color": "#FFF",
+          "size": 10,
+          "halo": {
+            "color": "#000"
+          }
+        }
+      },
+      "country": {
+        "filter": {
+          "kind_detail": ["2"]
+        },
+        "draw": {
+          "lines": {
+            "width": [[5,1]]
+          }
+        }
+      },
+      "province": {
+        "filter": {
+          "kind": ["province", "province_sf"]
+        },
+        "draw": {
+          "lines": {
+            "width": [[8,1],[11,0]]
+          }
+        }
+      },
+      "district": {
+        "filter": {
+          "kind": [
+            "district"
+          ]
+        },
+        "draw": {
+          "lines": {
+            "width": [[11,1]]
+          }
+        }
+      },
+      "ward": {
+        "filter": {
+          "kind": "ward"
+        },
+        "draw": {
+          "lines": {
+            "width": [[14,0]]
+          }
+        }
+      }
+    },
+    "places": {
+      "draw": {
+        "text": {
+          "color": "#FFF",
+          "size": 0,
+          "style": "bold",
+          "halo": {
+            "color": "#000"
+          }
+        }
+      },
+      "country": {
+        "filter": {
+          "kind": [
+            "country", "country_sf"
+          ]
+        },
+        "draw": {
+          "text": {
+            "size": [[3,9],[5,12],[6,18],[9,0]]
+          }
+        }
+      },
+      "archipelago": {
+        "filter": {
+          "kind": [
+            "archipelago"
+          ]
+        },
+        "draw": {
+          "text": {
+            "size": [[5,9],[6,12],[8,14]]
+          }
+        }
+      },
+      "province": {
+        "filter": {
+          "kind": [
+            "province"
+          ]
+        },
+        "draw": {
+          "text": {
+            "size": [[7,9],[8,16],[10,20],[14,0]]
+          }
+        },
+        "city": {
+          "filter": {
+            "kind_detail": [
+              "city"
+            ]
+          },
+          "draw": {
+            "text": {
+              "size": [[5,12],[8,18],[10,20],[14,0]]
+            }
+          }
+        }
+      },
+      "district": {
+        "filter": {
+          "kind": [
+            "district"
+          ]
+        },
+        "draw": {
+          "text": {
+            "size": [[11,16],[13,18], [14,0]]
+          }
+        }
+      },
+      "ward": {
+        "filter": {
+          "kind": [
+            "ward"
+          ]
+        },
+        "draw": {
+          "text": {
+            "size": [[14,14],[15,16],[17,0]]
+          }
+        }
+      }
+    },
+    "pois": {
+      "draw": {
+        "points": {
+          "color": "#FFF",
+          "size": [[2,0],[15,12]],
+          "halo": {
+            "color": "#000"
+          }
+        }
+      }
+    }
+  }
+}
