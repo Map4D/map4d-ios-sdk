@@ -1,5 +1,5 @@
 //
-//  Map4D 2.1.0
+//  Map4D 2.1.1
 //  Created by Sua Le on 09/28/21.
 //  Copyright@2018 by IOTLink
 //
@@ -19,7 +19,6 @@
 #import "MFCoordinateBounds.h"
 #import "MFPolygon.h"
 #import "MFCircle.h"
-#import "MFServices.h"
 #import "MFURLBuildingLayer.h"
 #import "MFURLTileLayer.h"
 #import "MFURLPOILayer.h"
