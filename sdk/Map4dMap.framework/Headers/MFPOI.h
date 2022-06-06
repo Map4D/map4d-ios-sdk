@@ -16,7 +16,9 @@
 
 @property(nonatomic, strong, nullable) NSString* title;
 
-@property(nonatomic, strong, nonnull) UIColor* titleColor;
+@property(nonatomic, strong, nonnull) UIColor* color;
+
+@property(nonatomic, strong, nonnull) UIColor* titleColor DEPRECATED_MSG_ATTRIBUTE("This property is no longer support. It is recommended that the 'color' property be used instead. This property is subject to removal in a future versions.");
 
 @property(nonatomic, strong, nullable) NSString* subtitle;
 

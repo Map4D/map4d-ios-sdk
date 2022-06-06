@@ -1,20 +1,64 @@
 {
+  "tool-version": "1.0.4",
+  "web-version": "2.2.0",
+  "mobile-version": "2.1.0",
+  "sources": {
+    "textures": {
+      "pois": {
+        "sprites": {
+          "width": 26,
+          "height": 32
+        },
+        "url": [
+          "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/627cd15e9c4fa69f92878f59.png",
+          "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/627cd15e9c4fa69f92878f5a.png",
+          "https://hcm01.vstorage.vngcloud.vn/v1/AUTH_4486f66f671c41bab0d3dea1904626d4/data/images/627cd15e9c4fa69f92878f5b.png"
+        ]
+      }
+    },
+    "patterns": {
+      "dashdash": {
+        "type": "dash",
+        "gap": 3,
+        "length": 3,
+        "repeat": 2
+      },
+      "dotdot": {
+        "type": "dot",
+        "repeat": 2
+      }
+    }
+  },
   "layers": {
     "earth": {
       "draw": {
         "polygons": {
-          "color": [[2,"#F1F3F4"]]
+          "color": [
+            [
+              2,
+              "#f8f9faff"
+            ]
+          ]
         }
       }
     },
     "water": {
       "draw": {
         "polygons": {
-          "color": "#90D5EF"
+          "color": "#94c0f2ff"
         },
         "lines": {
-          "color": "#90D5EF",
-          "width": [[12,1],[14,2]]
+          "color": "#94c0f2ff",
+          "width": [
+            [
+              12,
+              1
+            ],
+            [
+              14,
+              2
+            ]
+          ]
         }
       }
     },
@@ -34,16 +78,43 @@
       "draw": {
         "lines": {
           "color": "#FFF",
-          "width": [[10,1]],
+          "width": [
+            [
+              10,
+              1
+            ]
+          ],
           "outline": {
-            "color": [[7,"#ececec"],[15,"#dadce0"]],
-            "width": [[13,1]
+            "color": [
+              [
+                7,
+                "#dfe0e4ff"
+              ],
+              [
+                15,
+                "#dfe0e4ff"
+              ]
+            ],
+            "width": [
+              [
+                13,
+                1
+              ]
             ]
           }
         },
         "text": {
-          "color": "#677277",
-          "size": [[8,10],[17,12]],
+          "color": "#4e5256ff",
+          "size": [
+            [
+              8,
+              10
+            ],
+            [
+              17,
+              12
+            ]
+          ],
           "halo": {
             "color": "#FFF"
           }
@@ -57,15 +128,66 @@
         },
         "draw": {
           "lines": {
-            "color": "#FBC0AC",
-            "width": [[7,1],[10,2],[14,3],[15,5],[16,8],[17,13],[18,20],[19,36]],
+            "color": "#fddc7fff",
+            "width": [
+              [
+                7,
+                1
+              ],
+              [
+                10,
+                2
+              ],
+              [
+                14,
+                3
+              ],
+              [
+                15,
+                5
+              ],
+              [
+                16,
+                8
+              ],
+              [
+                17,
+                13
+              ],
+              [
+                18,
+                20
+              ],
+              [
+                19,
+                36
+              ]
+            ],
             "outline": {
-              "color": "#F9A09C",
-              "width": [[7,0],[11,1]]
+              "color": "#daa130ff",
+              "width": [
+                [
+                  7,
+                  0
+                ],
+                [
+                  8,
+                  1
+                ]
+              ]
             }
           },
           "text": {
-            "size": [[8,12]]
+            "size": [
+              [
+                7,
+                12
+              ]
+            ],
+            "color": "#783b03ff",
+            "halo": {
+              "color": null
+            }
           }
         }
       },
@@ -77,13 +199,51 @@
         },
         "draw": {
           "lines": {
-            "width": [[13,2],[15,4],[16,8],[17,13],[18,20],[19,36]],
+            "width": [
+              [
+                7,
+                2
+              ],
+              [
+                15,
+                4
+              ],
+              [
+                16,
+                8
+              ],
+              [
+                17,
+                13
+              ],
+              [
+                18,
+                20
+              ],
+              [
+                19,
+                36
+              ]
+            ],
             "outline": {
-              "width": [[13,1]]
-            }
+              "width": [
+                [
+                  13,
+                  1
+                ]
+              ],
+              "color": "#dfe0e4ff"
+            },
+            "color": "#ffffffff"
           },
           "text": {
-            "size": [[8,12]]
+            "size": [
+              [
+                5,
+                12
+              ]
+            ],
+            "color": "#4e5256ff"
           }
         },
         "primary": {
@@ -95,13 +255,50 @@
           },
           "draw": {
             "lines": {
-              "width": [[10,2],[14,3],[15,5],[16,8],[17,13],[18,20],[19,36]],
+              "width": [
+                [
+                  7,
+                  2
+                ],
+                [
+                  14,
+                  3
+                ],
+                [
+                  15,
+                  5
+                ],
+                [
+                  16,
+                  8
+                ],
+                [
+                  17,
+                  13
+                ],
+                [
+                  18,
+                  20
+                ],
+                [
+                  19,
+                  36
+                ]
+              ],
               "outline": {
-                "width": [[11,1]]
-              }
+                "width": [
+                  [
+                    11,
+                    1
+                  ]
+                ],
+                "color": "#dfe0e4ff"
+              },
+              "color": "#ffffffff"
             },
             "text": {
-              "size": 12
+              "size": 12,
+              "color": "#4e5256ff"
             }
           }
         },
@@ -114,15 +311,63 @@
           },
           "draw": {
             "lines": {
-              "color": [[7,"#EBB97B"], [11, "#FDE293"]],
-              "width": [[7,1],[10,2],[14,3],[15,5],[16,8],[17,13],[18,20],[19,36]],                
+              "color": [
+                [
+                  7,
+                  "#fdeec1ff"
+                ],
+                [
+                  13,
+                  "#fde293ff"
+                ]
+              ],
+              "width": [
+                [
+                  7,
+                  1
+                ],
+                [
+                  10,
+                  2
+                ],
+                [
+                  14,
+                  3
+                ],
+                [
+                  15,
+                  5
+                ],
+                [
+                  16,
+                  8
+                ],
+                [
+                  17,
+                  13
+                ],
+                [
+                  18,
+                  20
+                ],
+                [
+                  19,
+                  36
+                ]
+              ],
               "outline": {
-                "color": "#EBB97B",
-                "width": [[11,1]]
+                "color": "#f8ae0aff",
+                "width": [
+                  [
+                    3,
+                    1
+                  ]
+                ]
               }
             },
             "text": {
-              "size": 12
+              "size": 12,
+              "color": "#4e5256ff"
             }
           }
         }
@@ -136,10 +381,33 @@
         },
         "draw": {
           "lines": {
-            "width": [[17,3],[18,5],[19,10]],              
+            "width": [
+              [
+                16,
+                2
+              ],
+              [
+                18,
+                5
+              ],
+              [
+                19,
+                10
+              ]
+            ],
             "outline": {
-              "width": [[16,1]]
-            }
+              "width": [
+                [
+                  16,
+                  1
+                ]
+              ],
+              "color": "#dfe0e4ff"
+            },
+            "color": null
+          },
+          "text": {
+            "color": "#70757aff"
           }
         },
         "unclassified": {
@@ -150,9 +418,39 @@
           },
           "draw": {
             "lines": {
-              "width": [[14,0],[15,2],[16,4],[17,7],[18,10],[19,20]],
+              "width": [
+                [
+                  14,
+                  1
+                ],
+                [
+                  15,
+                  2
+                ],
+                [
+                  16,
+                  4
+                ],
+                [
+                  17,
+                  7
+                ],
+                [
+                  18,
+                  10
+                ],
+                [
+                  19,
+                  20
+                ]
+              ],
               "outline": {
-                "width": [[15,1]]
+                "width": [
+                  [
+                    15,
+                    1
+                  ]
+                ]
               }
             }
           }
@@ -165,9 +463,39 @@
           },
           "draw": {
             "lines": {
-              "width": [[14,0],[15,2],[16,4],[17,7],[18,10],[19,20]],
+              "width": [
+                [
+                  14,
+                  1
+                ],
+                [
+                  15,
+                  2
+                ],
+                [
+                  16,
+                  4
+                ],
+                [
+                  17,
+                  7
+                ],
+                [
+                  18,
+                  10
+                ],
+                [
+                  19,
+                  20
+                ]
+              ],
               "outline": {
-                "width": [[15,1]]
+                "width": [
+                  [
+                    15,
+                    1
+                  ]
+                ]
               }
             }
           }
@@ -181,10 +509,21 @@
           },
           "draw": {
             "lines": {
-              "color": "#DDDFE3",
-              "width": [[16,2]],
+              "color": "#5bb974ff",
+              "width": [
+                [
+                  16,
+                  2
+                ]
+              ],
               "outline": {
-                "width": [[18,1]]
+                "width": [
+                  [
+                    14,
+                    1
+                  ]
+                ],
+                "color": "#f8f9faff"
               }
             }
           }
@@ -199,9 +538,23 @@
         "draw": {
           "lines": {
             "color": "#DDDFE3",
-            "width": [[14,1],[15,2]],
+            "width": [
+              [
+                14,
+                1
+              ],
+              [
+                15,
+                2
+              ]
+            ],
             "outline": {
-              "width": [[14,1]]
+              "width": [
+                [
+                  14,
+                  1
+                ]
+              ]
             }
           }
         }
@@ -214,8 +567,25 @@
         },
         "draw": {
           "lines": {
-            "color": [[10,"#E5E5E5"]],
-            "width": [[10,2]]
+            "color": [
+              [
+                10,
+                "#b9c0c5ff"
+              ]
+            ],
+            "width": [
+              [
+                10,
+                2
+              ]
+            ],
+            "outline": {
+              "color": "#e4a421ff"
+            },
+            "pattern": "dashdash"
+          },
+          "text": {
+            "color": "#4e5256ff"
           }
         }
       },
@@ -227,12 +597,29 @@
         },
         "draw": {
           "lines": {
-            "color": "#F1F3F4",
-            "width": [[13,2],[15,6]],
+            "color": "#f8f9faff",
+            "width": [
+              [
+                13,
+                2
+              ],
+              [
+                15,
+                6
+              ]
+            ],
             "outline": {
-              "color": "#E1E3E6",
-              "width": [[10,1]]
+              "color": "#dfe0e4ff",
+              "width": [
+                [
+                  10,
+                  1
+                ]
+              ]
             }
+          },
+          "text": {
+            "color": "#4e5256ff"
           }
         }
       },
@@ -244,12 +631,22 @@
         },
         "draw": {
           "lines": {
-            "color": "#2B68C566",
-            "width": [[5,1]],
+            "width": [
+              [
+                5,
+                1
+              ]
+            ],
             "outline": {
-              "color": "#CBCDE133",
-              "width": [[5,1]]
-            }
+              "color": null,
+              "width": 1
+            },
+            "pattern": "dashdash",
+            "color": "#206cb7ff"
+          },
+          "text": {
+            "color": "#185abcff",
+            "size": 12
           }
         }
       }
@@ -257,8 +654,12 @@
     "boundaries": {
       "draw": {
         "lines": {
-          "color": "#FF00FF",
-          "width": [[2,0]]
+          "width": [
+            [
+              2,
+              0
+            ]
+          ]
         },
         "text": {
           "color": "#798083",
@@ -270,23 +671,58 @@
       },
       "country": {
         "filter": {
-          "kind_detail": ["2"]
+          "kind_detail": [
+            "2"
+          ]
         },
         "draw": {
           "lines": {
-            "color": "#768681",
-            "width": [[2,1]]
+            "width": [
+              [
+                2,
+                1
+              ]
+            ],
+            "color": "#7f7f7ffc"
+          },
+          "text": {
+            "color": "#000000ff",
+            "halo": {
+              "color": "#ffffffff"
+            }
           }
         }
       },
       "province": {
         "filter": {
-          "kind": ["province", "province_sf"]
+          "kind": [
+            "province",
+            "province_sf"
+          ]
         },
         "draw": {
           "lines": {
-            "color": [[7,"#BDBDBD"],[8,"#768681"]],
-            "width": [[5,1],[11,0]]
+            "color": [
+              [
+                7,
+                "#BDBDBD"
+              ],
+              [
+                8,
+                "#8a8a8aff"
+              ]
+            ],
+            "width": [
+              [
+                5,
+                1
+              ],
+              [
+                11,
+                0
+              ]
+            ],
+            "pattern": "dashdash"
           }
         }
       },
@@ -298,8 +734,17 @@
         },
         "draw": {
           "lines": {
-            "color": "#BDBDBD",
-            "width": [[11,1]]
+            "width": [
+              [
+                11,
+                1
+              ]
+            ],
+            "color": "#8a8a8aff",
+            "pattern": "dashdash"
+          },
+          "text": {
+            "color": "#4e5256ff"
           }
         }
       },
@@ -309,8 +754,17 @@
         },
         "draw": {
           "lines": {
-            "color": "#BDBDBD",
-            "width": [[14,0]]
+            "width": [
+              [
+                14,
+                0
+              ]
+            ],
+            "color": "#8a8a8aff",
+            "pattern": "dashdash"
+          },
+          "text": {
+            "color": "#4e5256ff"
           }
         }
       }
@@ -329,13 +783,34 @@
       "country": {
         "filter": {
           "kind": [
-            "country", "country_sf"
+            "country",
+            "country_sf"
           ]
         },
         "draw": {
           "text": {
-            "color": "#505050",
-            "size": [[2,9],[5,12],[6,18],[9,0]]
+            "color": "#232323ff",
+            "size": [
+              [
+                2,
+                9
+              ],
+              [
+                5,
+                12
+              ],
+              [
+                6,
+                18
+              ],
+              [
+                9,
+                0
+              ]
+            ],
+            "halo": {
+              "color": "#ffffffff"
+            }
           }
         }
       },
@@ -347,8 +822,24 @@
         },
         "draw": {
           "text": {
-            "color": "#505050",
-            "size": [[5,9],[6,12],[8,14]]
+            "color": "#181818ff",
+            "size": [
+              [
+                5,
+                9
+              ],
+              [
+                6,
+                12
+              ],
+              [
+                8,
+                14
+              ]
+            ],
+            "halo": {
+              "color": "#ffffffff"
+            }
           }
         }
       },
@@ -361,7 +852,24 @@
         "draw": {
           "text": {
             "color": "#565D67",
-            "size": [[7,9],[8,16],[10,20],[14,0]]
+            "size": [
+              [
+                7,
+                9
+              ],
+              [
+                8,
+                16
+              ],
+              [
+                10,
+                20
+              ],
+              [
+                14,
+                0
+              ]
+            ]
           }
         },
         "city": {
@@ -372,8 +880,28 @@
           },
           "draw": {
             "text": {
-              "color": "#505050",
-              "size": [[5,12],[8,18],[10,20],[14,0]]
+              "color": "#1d1f20ff",
+              "size": [
+                [
+                  5,
+                  12
+                ],
+                [
+                  8,
+                  18
+                ],
+                [
+                  10,
+                  20
+                ],
+                [
+                  14,
+                  0
+                ]
+              ],
+              "halo": {
+                "color": "#ffffffff"
+              }
             }
           }
         }
@@ -386,8 +914,21 @@
         },
         "draw": {
           "text": {
-            "color": "#6A7989",
-            "size": [[11,16],[13,18], [14,0]]
+            "color": "#4e5256ff",
+            "size": [
+              [
+                11,
+                12
+              ],
+              [
+                13,
+                13
+              ],
+              [
+                14,
+                0
+              ]
+            ]
           }
         }
       },
@@ -399,18 +940,1032 @@
         },
         "draw": {
           "text": {
-            "color": "#6A7989",
-            "size": [[14,14],[15,16],[17,0]]
+            "color": "#414448ff",
+            "size": [
+              [
+                14,
+                10
+              ],
+              [
+                15,
+                11
+              ],
+              [
+                17,
+                0
+              ]
+            ]
           }
         }
       }
     },
     "pois": {
+      "cafe": {
+        "filter": {
+          "kind": [
+            "cafe",
+            "milk_tea",
+            "drink"
+          ]
+        },
+        "draw": {
+          "points": {
+            "iconIndex": 19,
+            "color": "#f19800ff",
+            "texture": "pois",
+            "size": 12
+          }
+        }
+      },
+      "store": {
+        "filter": {
+          "kind": [
+            "car_dealer",
+            "motorcycle_dealer",
+            "bicycle_store",
+            "car_rental",
+            "motorcycle_rental",
+            "cosmetic_store",
+            "mommy_store",
+            "clothing_store",
+            "glasses_store",
+            "shoe_store",
+            "electronics_store",
+            "cellphone_store",
+            "computer_store",
+            "store",
+            "fruit_shop",
+            "florist",
+            "sports_store",
+            "toy_store",
+            "furniture_store",
+            "home_goods_store",
+            "jewelry_store",
+            "book_store",
+            "pet_store",
+            "liquor_store",
+            "gift_shop",
+            "building_materials_store",
+            "musical_instrument_store",
+            "electrical_supply_store",
+            "second_hand_store",
+            "fuel_store"
+          ]
+        },
+        "draw": {
+          "points": {
+            "color": "#5491f5ff",
+            "halo": {
+              "color": "#fdfdfdff"
+            },
+            "texture": "pois",
+            "iconIndex": 2,
+            "size": 12
+          }
+        }
+      },
+      "market": {
+        "filter": {
+          "kind": [
+            "food_store",
+            "convenience_store",
+            "local_market",
+            "supermarket",
+            "grocery_store",
+            "shopping_mall"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "color": "#5491f5ff",
+            "iconIndex": 3,
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "atm": {
+        "filter": {
+          "kind": [
+            "atm"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "color": "#7985caff",
+            "iconIndex": 4,
+            "halo": {
+              "color": "#fdfdfdff"
+            },
+            "size": 12
+          }
+        }
+      },
+      "bank": {
+        "filter": {
+          "kind": [
+            "bank",
+            "treasury"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "color": "#7985caff",
+            "halo": {
+              "color": "#fdfdfdff"
+            },
+            "iconIndex": 5,
+            "size": 12
+          }
+        }
+      },
+      "pharmacy": {
+        "filter": {
+          "kind": [
+            "pharmacy"
+          ]
+        },
+        "draw": {
+          "points": {
+            "color": "#ec685cff",
+            "halo": {
+              "color": "#fdfdfdff"
+            },
+            "texture": "pois",
+            "iconIndex": 6,
+            "size": 12
+          }
+        }
+      },
+      "hospital": {
+        "filter": {
+          "kind": [
+            "health",
+            "hospital",
+            "doctor",
+            "physiotherapist"
+          ]
+        },
+        "draw": {
+          "points": {
+            "color": "#ec685cff",
+            "halo": {
+              "color": "#fdfdfdff"
+            },
+            "texture": "pois",
+            "iconIndex": 7,
+            "size": 12
+          }
+        }
+      },
+      "dentist": {
+        "filter": {
+          "kind": [
+            "dentist"
+          ]
+        },
+        "draw": {
+          "points": {
+            "color": "#ec685cff",
+            "texture": "pois",
+            "iconIndex": 8,
+            "halo": {
+              "color": null
+            },
+            "size": 12
+          }
+        }
+      },
+      "bus_station": {
+        "filter": {
+          "kind": [
+            "bus_station",
+            "transit_station"
+          ]
+        },
+        "draw": {
+          "points": {
+            "color": "#678899ff",
+            "texture": "pois",
+            "iconIndex": 10,
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "airport": {
+        "filter": {
+          "kind": [
+            "airport"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 11,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "train_station": {
+        "filter": {
+          "kind": [
+            "train_station",
+            "subway_station"
+          ]
+        },
+        "draw": {
+          "points": {
+            "color": "#678899ff",
+            "texture": "pois",
+            "iconIndex": 12,
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "bus_stop": {
+        "filter": {
+          "kind": [
+            "bus_stop"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 54,
+            "color": "#2e7dfeff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "charging_station": {
+        "filter": {
+          "kind": [
+            "charging_station"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 13,
+            "color": "#678899ff",
+            "size": 12
+          }
+        }
+      },
+      "gas_station": {
+        "filter": {
+          "kind": [
+            "gas_station"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 14,
+            "color": "#678899ff",
+            "size": 12
+          }
+        }
+      },
+      "parking": {
+        "filter": {
+          "kind": [
+            "parking"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 15,
+            "color": "#678899ff",
+            "size": 12
+          }
+        }
+      },
+      "school": {
+        "filter": {
+          "kind": [
+            "preschool",
+            "primary_school",
+            "secondary_school",
+            "high_school",
+            "university",
+            "college",
+            "driving_school",
+            "language_center"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 16,
+            "color": "#78909cff",
+            "size": 12
+          }
+        }
+      },
+      "hotel": {
+        "filter": {
+          "kind": [
+            "lodging",
+            "hotel",
+            "apartment",
+            "guest_house"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 17,
+            "color": "#f06292ff",
+            "size": 12
+          }
+        }
+      },
+      "pagoda": {
+        "filter": {
+          "kind": [
+            "pagoda"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 22,
+            "size": 12,
+            "color": "#678899ff",
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "temple": {
+        "filter": {
+          "kind": [
+            "temple",
+            "worship"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 23,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "church": {
+        "filter": {
+          "kind": [
+            "church"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 24,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "storage": {
+        "filter": {
+          "kind": [
+            "storage"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 25,
+            "color": "#00bcfcff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "industrial_zone": {
+        "filter": {
+          "kind": [
+            "industrial_zone"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 26,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "campground": {
+        "filter": {
+          "kind": [
+            "campground"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 27,
+            "color": "#12b5cbff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "museum": {
+        "filter": {
+          "kind": [
+            "museum",
+            "art_gallery"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 28,
+            "color": "#678899ff",
+            "halo": {
+              "color": null
+            },
+            "size": 12
+          }
+        }
+      },
+      "public_beach": {
+        "filter": {
+          "kind": [
+            "public_beach"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 52,
+            "color": "#12b5cbff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "gym": {
+        "filter": {
+          "kind": [
+            "gym"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 29,
+            "size": 12,
+            "halo": {
+              "color": null
+            },
+            "color": "#8d70d5ff"
+          }
+        }
+      },
+      "sports_center": {
+        "filter": {
+          "kind": [
+            "sports_center"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 30,
+            "color": "#8d70d5ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "stadium": {
+        "filter": {
+          "kind": [
+            "stadium"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 31,
+            "color": "#8d70d5ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "park": {
+        "filter": {
+          "kind": [
+            "park",
+            "zoo"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 32,
+            "color": "#34a853ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "golf": {
+        "filter": {
+          "kind": [
+            "golf"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 33,
+            "color": "#8d70d5ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "amusement_park": {
+        "filter": {
+          "kind": [
+            "amusement_park"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 34,
+            "color": "#12b5cbff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "cinema": {
+        "filter": {
+          "kind": [
+            "cinema"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 34,
+            "color": "#12b5cbff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "library": {
+        "filter": {
+          "kind": [
+            "library"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 36,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "theater": {
+        "filter": {
+          "kind": [
+            "theater"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 37,
+            "color": "#12b5cbff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "spa": {
+        "filter": {
+          "kind": [
+            "spa",
+            "hair_care",
+            "beauty_salon"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 38,
+            "color": "#8d70d5ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "casino": {
+        "filter": {
+          "kind": [
+            "casino"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 39,
+            "color": "#12b5cbff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "courthouse": {
+        "filter": {
+          "kind": [
+            "courthouse",
+            "lawyer"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 40,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "police": {
+        "filter": {
+          "kind": [
+            "police"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "color": "#678899ff",
+            "iconIndex": 41,
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "committee": {
+        "filter": {
+          "kind": [
+            "committee"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 42,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "political": {
+        "filter": {
+          "kind": [
+            "political"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 43,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "community_center": {
+        "filter": {
+          "kind": [
+            "community_center"
+          ]
+        },
+        "draw": {
+          "points": {
+            "iconIndex": 44,
+            "color": "#678899ff",
+            "texture": "pois",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "fire_station": {
+        "filter": {
+          "kind": [
+            "fire_station"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 45,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "post_office": {
+        "filter": {
+          "kind": [
+            "post_office"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 46,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "veterinary_care": {
+        "filter": {
+          "kind": [
+            "veterinary_care"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 9,
+            "color": "#f56357ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "public_restroom": {
+        "filter": {
+          "kind": [
+            "public_restroom"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 47,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "cemetery": {
+        "filter": {
+          "kind": [
+            "cemetery"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 48,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "bridge": {
+        "filter": {
+          "kind": [
+            "bridge"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 49,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "power_station": {
+        "filter": {
+          "kind": [
+            "power_station"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 51,
+            "color": "#678899ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "resort": {
+        "filter": {
+          "kind": [
+            "resort"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 18,
+            "color": "#f06292ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "food_service": {
+        "filter": {
+          "kind": [
+            "food_service",
+            "bakery",
+            "eatery",
+            "fast_food",
+            "sweet_soup",
+            "ice_cream_shop",
+            "take_away",
+            "restaurant",
+            "beer_bar"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 20,
+            "color": "#f19800ff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "tourist_attraction": {
+        "filter": {
+          "kind": [
+            "tourist_attraction"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 53,
+            "color": "#00bcfcff",
+            "size": 12,
+            "halo": {
+              "color": null
+            }
+          }
+        }
+      },
+      "bar": {
+        "filter": {
+          "kind": [
+            "bar",
+            "pub",
+            "karaoke"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 21,
+            "color": "#f19800ff",
+            "size": 12
+          }
+        }
+      },
+      "harbour": {
+        "filter": {
+          "kind": [
+            "harbour"
+          ]
+        },
+        "draw": {
+          "points": {
+            "texture": "pois",
+            "iconIndex": 50,
+            "color": "#678899ff",
+            "size": 12
+          }
+        }
+      },
       "draw": {
         "points": {
-          "size": [[2,0],[15,12]],
+          "texture": "pois",
+          "iconIndex": 1,
+          "color": "#678899ff",
+          "size": 12,
           "halo": {
-            "color": "#FFF"
+            "color": null
           }
         }
       }
@@ -426,7 +1981,7 @@
         },
         "draw": {
           "polygons": {
-            "color": "#F1F3F4"
+            "color": "#e8eaedff"
           }
         }
       },
@@ -447,11 +2002,16 @@
         },
         "draw": {
           "polygons": {
-            "color": "#B6E59E"
+            "color": "#ceead6ff"
           },
           "lines": {
             "color": "#B6E59E",
-            "width": [[14,2]]
+            "width": [
+              [
+                14,
+                2
+              ]
+            ]
           }
         }
       },
@@ -491,7 +2051,7 @@
         },
         "draw": {
           "polygons": {
-            "color": "#A8DAB5"
+            "color": "#ceead6ff"
           }
         }
       },
@@ -503,7 +2063,7 @@
         },
         "draw": {
           "polygons": {
-            "color": "#FEEFC3"
+            "color": "#f1e9d7ff"
           }
         }
       },
@@ -515,7 +2075,7 @@
         },
         "draw": {
           "polygons": {
-            "color": "#DDDDE8"
+            "color": "#ebf7edff"
           }
         }
       },
@@ -529,10 +2089,15 @@
         "draw": {
           "lines": {
             "color": "#E2E4E6",
-            "width": [[2,0]]
+            "width": [
+              [
+                2,
+                0
+              ]
+            ]
           },
           "polygons": {
-            "color": "#E2E4E6"
+            "color": "#e6e8eaff"
           }
         }
       },
@@ -550,6 +2115,50 @@
       }
     },
     "transit": {},
-    "buildings": {}
+    "buildings": {
+      "building": {
+        "filter": {
+          "kind": [
+            "building",
+            "building_part"
+          ]
+        },
+        "roof": {
+          "filter": {
+            "kind_detail": [
+              "roof"
+            ]
+          },
+          "draw": {
+            "polygons": {
+              "color": "#fef7e0ff"
+            }
+          }
+        },
+        "draw": {
+          "polygons": {
+            "color": "#e6e8eaff"
+          }
+        }
+      },
+      "entrance_exit": {
+        "filter": {
+          "kind": [
+            "entrance",
+            "exit"
+          ]
+        },
+        "draw": {
+          "polygons": {
+            "color": "#fef7e0ff"
+          }
+        }
+      },
+      "draw": {
+        "polygons": {
+          "color": "#fef7e0ff"
+        }
+      }
+    }
   }
 }

@@ -15,6 +15,8 @@
 
 @protocol MFMapViewDelegate;
 @protocol LocationManagerDelegate;
+
+@class MFMapID;
 @class MFProjection;
 @class MFCameraPosition;
 @class MFCoordinateBounds;
@@ -53,7 +55,9 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
 
   @property (nonatomic) CGFloat nativeScale;
 
-  - (instancetype _Nonnull )initWithFrame: (CGRect)frame;
+  - (instancetype _Nonnull)initWithFrame:(CGRect)frame;
+
+  - (instancetype _Nonnull)initWithFrame:(CGRect)frame mapID:(MFMapID *_Nonnull)mapID;
 
   // Enable My Location
   - (void) setMyLocationEnabled: (bool) _isMyLocationEnable;
