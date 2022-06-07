@@ -58,6 +58,7 @@ class PolylineViewController: UIViewController {
       polyline?.color = .blue
       polyline?.width = 4
       polyline?.map = map4d
+      polyline?.strokePattern = MFStrokePattern.dash(length: 5, gap: 5)
       
       isAddPolyline = true
     }

@@ -6,7 +6,7 @@ project 'ios-sdk-examples-swift.xcodeproj'
 project 'ios-sdk-examples-objc.xcodeproj'
 
 def common_pods
-  pod 'Map4dMap', '~> 2.0.0'
+  pod 'Map4dMap', '~> 2.2'
 end
 
 target 'ios-sdk-examples-swift' do

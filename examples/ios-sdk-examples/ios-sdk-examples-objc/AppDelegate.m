@@ -16,8 +16,6 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  #error Register for API Key and insert here. Then delete this line.
-  [MFServices provideAccessKey:@"YOUR_API_KEY"];
   return YES;
 }
 

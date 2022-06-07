@@ -47,5 +47,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>Map4dMapAccessKey</key>
+	<string>6fd2e87fbb9c1aebba9dfad5d9ca2087</string>
 </dict>
 </plist>
