@@ -6,6 +6,7 @@ uniform float u_fogStart;
 uniform float u_fogRange;
 uniform vec3 u_fogColor;
 uniform float u_time;   
+uniform float u_transparency;   
 uniform int u_enableWater;
 
 uniform sampler2D u_texture;
@@ -37,5 +38,5 @@ void main() {
     float dist = (gl_FragCoord.z / gl_FragCoord.w);
     float visibility = (dist - u_fogStart) / u_fogRange;
     visibility = clamp(visibility, 0.0, 1.0);
-    gl_FragColor = vec4(mix(vertexColor.rgb, u_fogColor, visibility), vertexColor.a);
+    gl_FragColor = vec4(mix(vertexColor.rgb, u_fogColor, visibility), vertexColor.a * u_transparency);
 }

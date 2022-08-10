@@ -18,6 +18,8 @@
 
 @interface MFURLTileLayer : MFOverlay
 
+@property(nonatomic) CGFloat opacity;
+
 + (instancetype _Nonnull)tileLayerWithURLConstructor:(id<MFTileURLConstructor> _Nonnull)constructor;
 
 - (void) clearTileCache;

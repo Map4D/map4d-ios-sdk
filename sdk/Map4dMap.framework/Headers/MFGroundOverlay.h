@@ -9,21 +9,29 @@
 #define MFGroundOverlay_h
 
 #import "MFURLTileLayer.h"
+#import "MFCoordinateBounds.h"
 
-@class MFCoordinateBounds;
+NS_ASSUME_NONNULL_BEGIN
 
 @interface MFGroundOverlay : MFOverlay
 
-+ (instancetype _Nonnull)groundOverlayWithBounds:(MFCoordinateBounds* _Nonnull)bounds mapUrl:(NSString* _Nonnull)url;
-+ (instancetype _Nonnull)groundOverlayWithBounds:(MFCoordinateBounds* _Nonnull)bounds mapUrl:(NSString* _Nonnull)url overrideBaseMap:(BOOL) enabled;
+@property(nonatomic, readonly, strong) MFCoordinateBounds *bounds;
+@property(nonatomic, readonly) BOOL overrideBaseMap;
+@property(nonatomic) CGFloat opacity;
 
-+ (instancetype _Nonnull)groundOverlayWithBounds:(MFCoordinateBounds* _Nonnull)bounds
-                              tileURLConstructor:(id<MFTileURLConstructor> _Nonnull)constructor;
++ (instancetype)groundOverlayWithBounds:(MFCoordinateBounds *)bounds mapUrl:(NSString *)url;
++ (instancetype)groundOverlayWithBounds:(MFCoordinateBounds *)bounds mapUrl:(NSString *)url
+                        overrideBaseMap:(BOOL) enabled;
 
-+ (instancetype _Nonnull)groundOverlayWithBounds:(MFCoordinateBounds* _Nonnull)bounds
-                              tileURLConstructor:(id<MFTileURLConstructor> _Nonnull)constructor
-                                 overrideBaseMap:(BOOL) enabled;
++ (instancetype)groundOverlayWithBounds:(MFCoordinateBounds *)bounds
+                     tileURLConstructor:(id<MFTileURLConstructor>)constructor;
+
++ (instancetype)groundOverlayWithBounds:(MFCoordinateBounds *)bounds
+                     tileURLConstructor:(id<MFTileURLConstructor>)constructor
+                        overrideBaseMap:(BOOL) enabled;
 
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif /* MFGroundOverlay_h */

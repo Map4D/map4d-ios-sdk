@@ -1,5 +1,5 @@
 //
-//  Map4D 2.3.0
+//  Map4D 2.4.0
 //  Created by Sua Le on 09/28/21.
 //  Copyright@2018 by IOTLink
 //
@@ -24,4 +24,5 @@
 #import "MFURLTileLayer.h"
 #import "MFURLPOILayer.h"
 #import "MFGroundOverlay.h"
+#import "MFImageOverlay.h"
 #import "MFDirectionsRenderer.h"
