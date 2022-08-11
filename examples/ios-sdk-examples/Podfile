@@ -7,7 +7,9 @@ project 'ios-sdk-examples-objc.xcodeproj'
 
 def common_pods
   pod 'Map4dMap', '~> 2.4.0'
-  #pod 'Map4dMapTest', :path => '~/work/map4d/mapes/platforms/ios/build/Map4dMapTest-2.4.0/'
+#  pod 'Map4dMap', :path => '~/work/map4d/mapes/platforms/ios/build/Release-universal-Prod/'
+#  pod 'Map4dMapTest', :path => '~/work/map4d/mapes/platforms/ios/build/Map4dMapTest-2.4.0.b2/'
+#  pod 'Map4dMapTest', :path => '/Users/huydc/Downloads/Map4dMapTest-2.4.0/'
 end
 
 target 'ios-sdk-examples-swift' do
