@@ -1,37 +1,49 @@
 //
 //  MFCoordinateBounds.h
-//  Map4D
+//  Map4dMap SDK for iOS
 //
-//  Created by tantv on 10/15/18.
+//  Copyright (c) 2018 IOTLink LLC.
 //
 
 #ifndef MFCoordinateBounds_h
 #define MFCoordinateBounds_h
+
 #import <CoreLocation/CoreLocation.h>
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+
+NS_ASSUME_NONNULL_BEGIN
 
 @class MFPath;
 
 @interface MFCoordinateBounds : NSObject
 
-  @property(nonatomic, readonly, getter=northEast) CLLocationCoordinate2D northEast;
+/** The North-East corner of these bounds. */
+@property(nonatomic, readonly, getter=northEast) CLLocationCoordinate2D northEast;
 
-  @property(nonatomic, readonly, getter=southWest) CLLocationCoordinate2D southWest;
+/** The South-West corner of these bounds. */
+@property(nonatomic, readonly, getter=southWest) CLLocationCoordinate2D southWest;
 
-- (instancetype _Nonnull ) initWithCoordinate:(CLLocationCoordinate2D)coord coordinate1:(CLLocationCoordinate2D)coord1;
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coord1
+                        coordinate:(CLLocationCoordinate2D)coord2;
 
-- (instancetype _Nonnull ) initWithPath: (MFPath * _Nonnull)path;
+- (instancetype)initWithPath:(MFPath *)path;
 
-  - (MFCoordinateBounds* _Nonnull) includingCoordinate:(CLLocationCoordinate2D)coordinate;
+- (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coord
+                       coordinate1:(CLLocationCoordinate2D)coord1
+__deprecated_msg("This init method will be removed in future versions.  Use 'init(coordinate:coordinate:)' instead of.");
 
-  - (MFCoordinateBounds* _Nonnull)includingBounds:(MFCoordinateBounds * _Nonnull) other;
+- (MFCoordinateBounds *)includingCoordinate:(CLLocationCoordinate2D)coordinate;
 
-  - (MFCoordinateBounds* _Nonnull) includingPath:(MFPath * _Nonnull)path;
+- (MFCoordinateBounds *)includingBounds:(MFCoordinateBounds *) other;
 
-  - (bool)containsLatitude:(double)latitude;
-  - (bool)containsLongitude:(double)longitude;
-  - (bool)contains:(CLLocationCoordinate2D)coordinate;
+- (MFCoordinateBounds *)includingPath:(MFPath *)path;
+
+- (BOOL)containsLatitude:(double)latitude;
+- (BOOL)containsLongitude:(double)longitude;
+- (BOOL)contains:(CLLocationCoordinate2D)coordinate;
 @end
+
+NS_ASSUME_NONNULL_END
 
 #endif /* MFCoordinateBounds_h */

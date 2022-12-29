@@ -1,7 +1,9 @@
 //
-//  Map4D 2.4.4
-//  Created by Sua Le on 09/28/21.
-//  Copyright@2018 by IOTLink
+//  Map4dMap.h
+//  Map4dMap SDK for iOS
+//  Version 2.5.0
+//
+//  Copyright (c) 2022 IOTLink LLC.
 //
 
 #import <Foundation/Foundation.h>
@@ -26,3 +28,13 @@
 #import "MFGroundOverlay.h"
 #import "MFImageOverlay.h"
 #import "MFDirectionsRenderer.h"
+#import "MFGeoJSON.h"
+#import "MFGeoJSONStyle.h"
+#import "MFGeoJSONFeature.h"
+#import "MFGeoJSONPoint.h"
+#import "MFGeoJSONMultiPoint.h"
+#import "MFGeoJSONLineString.h"
+#import "MFGeoJSONMultiLineString.h"
+#import "MFGeoJSONPolygon.h"
+#import "MFGeoJSONMultiPolygon.h"
+#import "MFGeoJSONGeometryCollection.h"
