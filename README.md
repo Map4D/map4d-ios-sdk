@@ -25,7 +25,7 @@ pod 'Map4dMap'
 
 ```xml
 <key>Map4dMapAccessKey</key>
-<string>{your_key}</string>
+<string>YOUR_ACCESS_KEY</string>
 ```
 
 2. Create map view
@@ -45,10 +45,10 @@ class ViewController: UIViewController {
 
 ## Document
 
-https://docs.map4d.vn/map4d-ios-sdk/
+https://docs.map4d.vn/map4d-map/ios/
 
 
 License
 -------
 
-Copyright (C) 2021 IOT Link Ltd. All Rights Reserved.
+Copyright (C) 2023 IOT Link Ltd. All Rights Reserved.
