@@ -31,7 +31,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithCoordinate:(CLLocationCoordinate2D)coord
                        coordinate1:(CLLocationCoordinate2D)coord1
-__deprecated_msg("This init method will be removed in future versions.  Use 'init(coordinate:coordinate:)' instead of.");
+__deprecated_msg("This init method will be removed in future versions. Use 'init(coordinate:coordinate:)' instead of.");
 
 - (MFCoordinateBounds *)includingCoordinate:(CLLocationCoordinate2D)coordinate;
 
