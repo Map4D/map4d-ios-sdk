@@ -120,4 +120,7 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
  */
 - (nullable MFCoordinateBounds*)getBounds;
 
+- (double)metersForPoints:(double)points;
+- (double)pointsForMeters:(double)meters;
+
 @end
