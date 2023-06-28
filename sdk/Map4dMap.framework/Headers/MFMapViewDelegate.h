@@ -21,6 +21,7 @@
 @class MFDirectionsRenderer;
 @class MFGeoJSON;
 @class MFGeoJSONFeature;
+@class MFDataSourceFeature;
 
 @protocol MFMapViewDelegate <NSObject>
 @optional
@@ -52,6 +53,7 @@
 
 - (void)mapView:(MFMapView *)mapView didTapDirectionsRenderer:(MFDirectionsRenderer *)renderer routeIndex:(NSUInteger)routeIndex;
 - (void)mapView:(MFMapView *)mapView didTapGeoJSON:(MFGeoJSON *)geoJSON feature:(MFGeoJSONFeature *)feature;
+- (void)mapView:(MFMapView *)mapView didTapDataSourceFeature:(MFDataSourceFeature *)feature location:(CLLocationCoordinate2D)location;
 
 - (BOOL)shouldChangeMapModeForMapView:(MFMapView *)mapView DEPRECATED_MSG_ATTRIBUTE("This method is no longer support. It is recommended that the 'didReachLimitedZoom' delegate be used instead. This method is subject to removal in a future versions.");
 - (BOOL)didTapMyLocationButtonForMapView:(MFMapView *)mapView;

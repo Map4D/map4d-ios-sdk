@@ -1,9 +1,9 @@
 //
 //  Map4dMap.h
 //  Map4dMap SDK for iOS
-//  Version 2.5.5
+//  Version 2.6.0
 //
-//  Copyright (c) 2022 IOTLink LLC.
+//  Copyright (c) 2023 IOTLink LLC.
 //
 
 #import <Foundation/Foundation.h>
@@ -38,3 +38,4 @@
 #import "MFGeoJSONPolygon.h"
 #import "MFGeoJSONMultiPolygon.h"
 #import "MFGeoJSONGeometryCollection.h"
+#import "MFDataSourceFeature.h"
