@@ -1,14 +1,16 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.3'
 
+#source 'git@github.com:IOTLink-DaNang/CocoaPods-Specs.git'
+
 workspace 'ios-sdk-examples'
 project 'ios-sdk-examples-swift.xcodeproj'
 project 'ios-sdk-examples-objc.xcodeproj'
 
 def common_pods
-  pod 'Map4dMap', '~> 2.5.1'
+  pod 'Map4dMap'
 #  pod 'Map4dMap', :path => '../../sdk'
-#  pod 'Map4dMapTest', :path => '~/Downloads/Map4dMapTest/'
+#  pod 'Map4dMapStaging'
 end
 
 target 'ios-sdk-examples-swift' do
