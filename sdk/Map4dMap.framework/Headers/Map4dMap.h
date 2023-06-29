@@ -1,7 +1,7 @@
 //
 //  Map4dMap.h
 //  Map4dMap SDK for iOS
-//  Version 2.6.0
+//  Version 2.6.1
 //
 //  Copyright (c) 2023 IOTLink LLC.
 //
