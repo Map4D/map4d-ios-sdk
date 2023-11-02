@@ -16,6 +16,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+  NSBundle *bundle = [NSBundle bundleForClass:[MFMapView class]];
+  NSString *version = bundle.infoDictionary[@"CFBundleShortVersionString"];
+  // NSString *version = bundle.infoDictionary[@"CFBundleVersion"];
+  NSLog(@"Map4D Map version: %@", version);
+
   return YES;
 }
 

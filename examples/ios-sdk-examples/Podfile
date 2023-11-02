@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.3'
 
-#source 'git@github.com:IOTLink-DaNang/CocoaPods-Specs.git'
+#source 'git@github.com:IOTLink-Map4D/CocoaPods-Specs.git'
 
 workspace 'ios-sdk-examples'
 project 'ios-sdk-examples-swift.xcodeproj'

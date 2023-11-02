@@ -16,6 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    let version = Bundle(for: MFMapView.self).infoDictionary?["CFBundleShortVersionString"] as? String
+    // let version = Bundle(for: MFMapView.self).infoDictionary?["CFBundleVersion"] as? String
+    print("Map4D Map version: \(version ?? "unknow")")
+
     return true
   }
 
