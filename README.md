@@ -1,8 +1,11 @@
-# Map4D SDK
+# Map4D Map SDK for iOS
+[![map4d](https://img.shields.io/badge/map4d-map-orange)](https://map4d.vn/)
+[![platform](https://img.shields.io/cocoapods/p/Map4dMap)](https://www.apple.com/ios/)
+[![cocoapods](https://img.shields.io/cocoapods/v/Map4dMap)](https://cocoapods.org/pods/Map4dMap)
 
-Map4D SDK for iOS, written in C/C++, Objective C.
+Map4D Map SDK for iOS, written in C/C++, Objective-C.
 
-![Map4D iOS SDK](https://docs.map4d.vn/map4d-ios-sdk/resource/Untitled-1_0000_Right-Mockup--phone-demo.png)
+![Map4D iOS SDK](https://docs.map4d.vn/map4d-map/ios/resources/Untitled-1_0000_Right-Mockup--phone-demo.png)
 
 
 ## Installation
@@ -51,4 +54,4 @@ https://docs.map4d.vn/map4d-map/ios/
 License
 -------
 
-Copyright (C) 2023 IOT Link Ltd. All Rights Reserved.
+Copyright (C) 2024 IOT Link Ltd. All Rights Reserved.
