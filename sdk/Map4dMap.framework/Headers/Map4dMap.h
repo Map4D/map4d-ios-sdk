@@ -1,15 +1,15 @@
 //
 //  Map4dMap.h
 //  Map4dMap SDK for iOS
-//  Version 2.7.2
+//  Version 3.0.0-beta.4
 //
 //  Copyright (c) 2023 IOTLink LLC.
 //
 
-#import <Foundation/Foundation.h>
 #import "MFMapID.h"
 #import "MFMapView.h"
 #import "MFMapView+Animation.h"
+#import "MFMapStyle.h"
 #import "MFMarker.h"
 #import "MFPOI.h"
 #import "MFBuilding.h"
@@ -25,7 +25,6 @@
 #import "MFURLBuildingLayer.h"
 #import "MFURLTileLayer.h"
 #import "MFURLPOILayer.h"
-#import "MFGroundOverlay.h"
 #import "MFImageOverlay.h"
 #import "MFDirectionsRenderer.h"
 #import "MFGeoJSON.h"
