@@ -9,17 +9,19 @@ uniform float u_fogStart;
 uniform float u_fogRange;
 uniform vec3 u_fogColor;
 
+uniform int u_useColorAtt;
+
 varying vec3 v_position;
 varying vec2 v_uv;
 varying vec3 v_normal;
-
+varying vec4 v_color;
 
 void main() {
     // initialize
     vec3 diffuse = vec3(1.0, 1.0, 1.0);
 
     vec3 normal = normalize(v_normal);
-    vec4 materialColor = texture2D(u_texture, v_uv);
+    vec4 materialColor = u_useColorAtt == 1 ? v_color : texture2D(u_texture, v_uv);
     vec3 light = normalize(u_light_position);
 
     // diffuse

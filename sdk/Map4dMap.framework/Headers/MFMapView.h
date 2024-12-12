@@ -10,13 +10,11 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-#define FPS_PREFERRED_NORMAL 0
-#define FPS_LIMITED_3D_EFFECT 15
-
 @protocol MFMapViewDelegate;
 @protocol LocationManagerDelegate;
 
 @class MFMapID;
+@class MFMapStyle;
 @class MFProjection;
 @class MFCameraPosition;
 @class MFCoordinateBounds;
@@ -30,14 +28,11 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
   /** Roadmap maps.  The default. */
   MFMapTypeRoadmap,
 
-  /** Raster maps. */
-  MFMapTypeRaster,
-
   /** Satellite maps. */
   MFMapTypeSatellite,
 
-  /** 3D maps. */
-  MFMapTypeMap3D,
+  /** Mixture of normal and satellite. */
+  MFMapTypeHybrid,
 };
 
 @interface MFMapView : UIView
@@ -49,14 +44,16 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
  * Returns a MFProjection object that you can use to convert between screen
  * coordinates and latitude/longitude coordinates.
  */
-@property(nonatomic, readonly) MFProjection *_Nullable projection;
+@property(nonatomic, readonly, nullable) MFProjection *projection;
 
 /** Camera */
-@property(nonatomic, copy) MFCameraPosition *_Nullable camera;
+@property(nonatomic, copy, nullable) MFCameraPosition *camera;
 
-@property(nonatomic, strong, readonly) MFUISettings *settings;
+@property(nonatomic, readonly) MFUISettings *settings;
 
-@property(nonatomic, assign) MFMapType mapType;
+@property(nonatomic) MFMapType mapType;
+
+@property(nonatomic, nullable) MFMapStyle *mapStyle;
 
 @property(nonatomic) CGFloat nativeScale;
 
@@ -64,37 +61,22 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
 
 - (instancetype)initWithFrame:(CGRect)frame mapID:(MFMapID *)mapID;
 
+- (void)setMapID:(MFMapID *)mapID;
+
 /** Enable My Location */
 - (void)setMyLocationEnabled:(bool)_isMyLocationEnable;
 - (CLLocation *_Nullable)getMyLocation;
 
-/** Set filter places place */
-- (void)setFilterPlaces:(NSArray<NSString *> *_Nullable)filterPlaces;
-
-/** Get filter places place */
-- (NSArray<NSString *> *)getFilterPlaces;
-
 - (void)setPOIsEnabled:(bool)enabled;
 - (bool)isPOIsEnabled;
+
 - (void)setBuildingsEnabled:(bool)enabled;
 - (bool)isBuildingsEnabled;
-- (void)setHiddenBuilding:(NSString *)buildingId;
-- (void)setUnhiddenBuilding:(NSString *)buildingId;
+
 - (void)setSelectedBuildings:(NSArray<NSString *> *_Nullable)buildingIds;
-- (void)setMapID:(MFMapID *)mapID;
 
 /** Native Zoom */
 - (void)setMaxNativeZoom:(double)zoom;
-
-- (void)enable3DMode:(bool)enabled DEPRECATED_MSG_ATTRIBUTE(
-                         "This method was intended to set map type map 3D. It "
-                         "has been superseded by 'mapType' property. This "
-                         "method is subject to removal in a future versions.");
-
-- (bool)is3DMode DEPRECATED_MSG_ATTRIBUTE(
-    "This type of mode checking is not recommended. It is recommended that the "
-    "'mapType' property be used instead. This method is subject to removal in "
-    "a future versions.");
 
 - (void)setMinZoom:(double)minZoom maxZoom:(double)maxZoom;
 
@@ -112,15 +94,17 @@ typedef NS_ENUM(NSUInteger, MFMapType) {
  */
 - (void)setTime:(nullable NSDate *)date;
 
-/** Enable Water Effect on 3D Mode */
+/** Enable Water Effect */
 - (void)enableWaterEffect:(bool)enabled;
+
+- (void)setSource:(NSString *)source opacity:(CGFloat)opacity;
+
+/** Build a MFCameraPosition that presents bounds. */
+- (nullable MFCameraPosition *)cameraForBounds:(MFCoordinateBounds *)bounds;
 
 /** Build a MFCameraPosition that presents bounds with padding. */
 - (nullable MFCameraPosition *)cameraForBounds:(MFCoordinateBounds *)bounds
                                         insets:(UIEdgeInsets)insets;
-
-/** Build a MFCameraPosition that presents bounds. */
-- (nullable MFCameraPosition *)cameraForBounds:(MFCoordinateBounds *)bounds;
 
 /** Get current MapView bounds */
 - (nullable MFCoordinateBounds *)getBounds;
