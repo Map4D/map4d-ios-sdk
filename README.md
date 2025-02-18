@@ -54,4 +54,4 @@ https://docs.map4d.vn/map4d-map/ios/
 License
 -------
 
-Copyright (C) 2024 IOT Link Ltd. All Rights Reserved.
+Copyright (c) 2025 IOT Link Ltd. All Rights Reserved.
