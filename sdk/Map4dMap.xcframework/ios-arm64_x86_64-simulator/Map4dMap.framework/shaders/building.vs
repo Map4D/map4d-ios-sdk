@@ -1,0 +1,22 @@
+attribute vec3 a_position;
+attribute vec2 a_uv;
+attribute vec3 a_normal;
+attribute vec4 a_color;
+
+uniform mat4 u_modelMatrix;
+uniform mat4 u_mvpMatrix;
+
+varying vec2 v_uv;
+varying vec3 v_normal;
+varying vec3 v_position;
+varying vec4 v_color;
+
+void main() {
+    gl_Position = u_mvpMatrix * vec4(a_position, 1.0);
+    v_uv = a_uv;
+    // Convert normal vector to world space (make sure that we don't translate it)
+    v_normal = normalize(vec3((u_modelMatrix * vec4(a_normal, 0.0)).xyz));
+    // Calculate eye vector
+    v_position =  (u_modelMatrix * vec4(a_position, 1.0)).xyz;
+    v_color = a_color;
+}
